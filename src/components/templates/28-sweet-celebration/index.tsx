@@ -67,7 +67,7 @@ export default function SweetCelebrationTemplate({ data, templateSlug, guestName
       <OrnamentBunting className="mx-auto mt-6 h-8 w-[85%] text-[#c9789a]" />
 
       {/* ============ CELEBRANT + AGE ============ */}
-      <section className="mx-auto max-w-sm px-6 py-10 text-center">
+      <section className="scene-h mx-auto flex max-w-sm flex-col items-center justify-center px-6 text-center">
         <Reveal direction="scale">
           <div className="relative mx-auto h-56 w-56 overflow-hidden rounded-full border-8 border-white shadow-[0_25px_50px_-15px_rgba(201,120,154,0.4)]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -80,7 +80,7 @@ export default function SweetCelebrationTemplate({ data, templateSlug, guestName
       </section>
 
       {/* ============ COUNTDOWN ============ */}
-      <section className="relative overflow-hidden bg-[#fde9ef] px-6 py-16 text-center">
+      <section className="scene-h relative flex flex-col items-center justify-center overflow-hidden bg-[#fde9ef] px-6 text-center">
         <OrnamentConfettiBurst className="pointer-events-none absolute left-1/2 top-0 h-40 w-40 -translate-x-1/2 text-[#c9789a]/30" />
         <Reveal direction="scale" className="relative">
           <p className="text-xs uppercase tracking-[0.3em] text-[#8a5a6a]">Menuju Hari Bahagia</p>

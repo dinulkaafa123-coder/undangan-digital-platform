@@ -73,7 +73,7 @@ export default function OceanPearlTemplate({ data, templateSlug, guestName }: In
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#2c5f73] bg-white text-[#2c5f73]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[58vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroPhotoUrl} alt="Pasangan" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#f5f1ea] via-transparent to-transparent" />
@@ -116,7 +116,7 @@ export default function OceanPearlTemplate({ data, templateSlug, guestName }: In
       <WaveDivider className="text-[#c9a24b]" />
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="bg-[#2c5f73] px-6 py-20 text-center text-white">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#2c5f73] px-6 text-center text-white">
         <Reveal direction="scale">
           <h2 className="font-[family-name:var(--font-display)] text-2xl">Menuju Hari Bahagia</h2>
           <div className="mt-10">

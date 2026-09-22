@@ -76,7 +76,7 @@ export default function DiamondPalace3DTemplate({ data, templateSlug, guestName 
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#d4af6a] bg-[#2c2417] text-[#d4af6a] animate-pulse-glow" />
 
       {/* ============ HERO -- royal painting ============ */}
-      <section className="perspective-1600 relative mx-auto max-w-lg px-6 pt-16 text-center">
+      <section className="scene-h perspective-1600 relative mx-auto flex max-w-lg flex-col items-center justify-center px-6 text-center">
         <FloatingParticles count={10} particleClassName="bg-[#d4af6a]/50" />
         <Reveal direction="depth">
           <div className="preserve-3d relative mx-auto w-full max-w-sm border-[10px] border-double border-[#d4af6a] bg-[#241c10] p-2 shadow-[0_35px_70px_-25px_rgba(0,0,0,0.6)] [transform:rotateX(2deg)]">
@@ -115,7 +115,7 @@ export default function DiamondPalace3DTemplate({ data, templateSlug, guestName 
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="relative overflow-hidden bg-[#241c10] px-6 py-20 text-[#f4ecd8]">
+      <section className="scene-h relative flex flex-col items-center justify-center overflow-hidden bg-[#241c10] px-6 py-20 text-[#f4ecd8]">
         <OrnamentChandelier className="pointer-events-none absolute left-1/2 top-2 h-20 w-32 -translate-x-1/2 text-[#d4af6a]/30" />
         <FloatingParticles count={10} particleClassName="bg-[#d4af6a]/60" />
         <Reveal direction="scale" className="relative text-center">

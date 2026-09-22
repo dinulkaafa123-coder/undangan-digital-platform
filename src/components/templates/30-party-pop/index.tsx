@@ -57,7 +57,7 @@ export default function PartyPopTemplate({ data, templateSlug, guestName }: Birt
       <OrnamentBunting className="mx-auto mt-6 h-8 w-[85%] text-[#ff5c7a]" />
 
       {/* ============ CELEBRANT ============ */}
-      <section className="mx-auto max-w-sm px-6 py-10 text-center">
+      <section className="scene-h mx-auto flex max-w-sm flex-col items-center justify-center px-6 text-center">
         <Reveal direction="drop">
           <div className="-rotate-2 border-4 border-black bg-white p-2 shadow-[6px_6px_0_#000]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -70,7 +70,7 @@ export default function PartyPopTemplate({ data, templateSlug, guestName }: Birt
       </section>
 
       {/* ============ COUNTDOWN ============ */}
-      <section className="bg-[#5cc9ff] px-6 py-16 text-center">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#5cc9ff] px-6 text-center">
         <Reveal direction="drop">
           <p className="text-sm font-black uppercase tracking-wide">{formatFullDate(data.schedule.date)}</p>
           <div className="mt-8">

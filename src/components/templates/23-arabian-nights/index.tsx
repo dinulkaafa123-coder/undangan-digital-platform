@@ -73,7 +73,7 @@ export default function ArabianNightsTemplate({ data, templateSlug, guestName }:
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#d4af37] bg-[#0d1a3a] text-[#d4af37]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative mx-auto max-w-lg px-6 pt-16 text-center">
+      <section className="scene-h relative mx-auto flex max-w-lg flex-col items-center justify-center px-6 text-center">
         <Reveal direction="scale">
           <div className="relative mx-auto w-fit">
             <OrnamentKeyholeArch className="absolute inset-0 h-full w-full text-[#d4af37]" />
@@ -117,7 +117,7 @@ export default function ArabianNightsTemplate({ data, templateSlug, guestName }:
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="relative overflow-hidden border-y border-white/10 px-6 py-20 text-center">
+      <section className="scene-h relative flex flex-col items-center justify-center overflow-hidden border-y border-white/10 px-6 text-center">
         <FloatingParticles count={12} particleClassName="bg-white/70" />
         <Reveal direction="scale" className="relative">
           <h2 className="font-[family-name:var(--font-display)] text-2xl text-[#d4af37]">Menuju Hari Bahagia</h2>

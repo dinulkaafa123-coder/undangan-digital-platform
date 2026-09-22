@@ -59,7 +59,7 @@ export default function IslamicKidsTemplate({ data, templateSlug, guestName }: K
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="bg-[#0f5c3e] text-[#f5d97a]" />
 
       {/* ============ CHILD PHOTO ============ */}
-      <section className="mx-auto max-w-sm px-6 pt-16 text-center">
+      <section className="scene-h mx-auto flex max-w-sm flex-col items-center justify-center px-6 text-center">
         <Reveal direction="scale">
           <div className="perspective-1600 relative mx-auto h-64 w-52">
             <OrnamentIslamicArch className="absolute inset-0 h-full w-full text-[#f5d97a]" />
@@ -87,7 +87,7 @@ export default function IslamicKidsTemplate({ data, templateSlug, guestName }: K
       </section>
 
       {/* ============ ANNOUNCEMENT ============ */}
-      <section className="bg-[#0f5c3e] px-6 py-14 text-center text-white">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#0f5c3e] px-6 text-center text-white">
         <Reveal direction="up">
           <p className="text-sm uppercase tracking-[0.3em] text-[#f5d97a]">Telah dikhitankan putra kami</p>
           <p className="mt-4 text-xs uppercase tracking-widest text-[#cdeedd]">{data.child.childOrder}</p>

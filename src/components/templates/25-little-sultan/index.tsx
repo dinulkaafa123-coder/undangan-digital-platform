@@ -73,7 +73,7 @@ export default function LittleSultanTemplate({ data, templateSlug, guestName }: 
       </section>
 
       {/* ============ CHILD PHOTO & NAME ============ */}
-      <section className="mx-auto max-w-sm px-6 py-10 text-center">
+      <section className="scene-h mx-auto flex max-w-sm flex-col items-center justify-center px-6 text-center">
         <Reveal direction="depth">
           <PhotoFrame3D
             src={data.child.photoUrl}
@@ -89,7 +89,7 @@ export default function LittleSultanTemplate({ data, templateSlug, guestName }: 
       </section>
 
       {/* ============ ANNOUNCEMENT ============ */}
-      <section className="bg-[#1a2a5c] px-6 py-14 text-center text-white">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#1a2a5c] px-6 text-center text-white">
         <Reveal direction="up">
           <p className="text-sm uppercase tracking-[0.3em] text-[#d4af37]">Telah dikhitankan putra kami</p>
           <p className="mt-4 text-xs uppercase tracking-widest text-[#cdd6f0]">{data.child.childOrder}</p>

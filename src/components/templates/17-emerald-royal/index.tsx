@@ -65,7 +65,7 @@ export default function EmeraldRoyalTemplate({ data, templateSlug, guestName }: 
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#d4af37] bg-[#0d3b2e] text-[#d4af37]" />
 
       {/* ============ HERO -- royal portrait ============ */}
-      <section className="relative mx-auto max-w-lg px-6 pt-16 text-center">
+      <section className="scene-h relative mx-auto flex max-w-lg flex-col items-center justify-center px-6 text-center">
         <Reveal direction="unfold">
           <div className="relative mx-auto w-fit border-[10px] border-double border-[#d4af37] bg-[#0d3b2e] p-2 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.4)]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -105,7 +105,7 @@ export default function EmeraldRoyalTemplate({ data, templateSlug, guestName }: 
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="bg-[#0d3b2e] px-6 py-20 text-center text-[#f6f1e2]">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#0d3b2e] px-6 text-center text-[#f6f1e2]">
         <Reveal direction="scale">
           <h2 className="font-[family-name:var(--font-display)] text-2xl">Menuju Hari Bahagia</h2>
           <div className="mt-10">

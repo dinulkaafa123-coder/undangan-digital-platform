@@ -77,7 +77,7 @@ export default function GoldenBallroomTemplate({ data, templateSlug, guestName }
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#d4af37] bg-[#3a1010] text-[#d4af37] animate-pulse-glow" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[62vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroPhotoUrl} alt="Pasangan" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#f8e9c9] via-transparent to-transparent" />
@@ -118,7 +118,7 @@ export default function GoldenBallroomTemplate({ data, templateSlug, guestName }
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="bg-[#3a1010] px-6 py-20 text-center text-[#f8e9c9]">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#3a1010] px-6 text-center text-[#f8e9c9]">
         <Reveal direction="scale">
           <h2 className="font-[family-name:var(--font-display)] text-2xl">Menuju Hari Bahagia</h2>
           <div className="mt-10">

@@ -56,7 +56,7 @@ export default function IslamicEmeraldTemplate({ data, templateSlug, guestName }
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="bg-[#0f3d2e] text-[#d4af37]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[50vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroImage} alt={data.title} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#f6f1e2] via-transparent to-transparent" />
@@ -87,7 +87,7 @@ export default function IslamicEmeraldTemplate({ data, templateSlug, guestName }
       )}
 
       {/* ============ COUNTDOWN ============ */}
-      <section className="bg-[#0f3d2e] px-6 py-16 text-center text-[#f6f1e2]">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#0f3d2e] px-6 text-center text-[#f6f1e2]">
         <Reveal direction="scale">
           <p className="text-xs uppercase tracking-[0.3em] text-[#e2d6b8]">Menuju Hari Acara</p>
           <div className="mt-8">

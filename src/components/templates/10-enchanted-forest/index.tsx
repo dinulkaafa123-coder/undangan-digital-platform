@@ -29,7 +29,7 @@ function ForestParallaxHero({ heroPhotoUrl }: { heroPhotoUrl: string }) {
   const nearRef = useParallax<HTMLDivElement>(0.3);
 
   return (
-    <div className="relative h-[68vh] w-full overflow-hidden bg-[#0f2318]">
+    <div className="scene-h relative w-full overflow-hidden bg-[#0f2318]">
       <div ref={farRef} className="absolute inset-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={heroPhotoUrl} alt="Pasangan di hutan" className="h-full w-full object-cover opacity-80" />
@@ -134,7 +134,7 @@ export default function EnchantedForestTemplate({ data, templateSlug, guestName 
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="bg-[#1f3d2c] px-6 py-20 text-center text-[#f3ede0]">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#1f3d2c] px-6 text-center text-[#f3ede0]">
         <Reveal direction="scale">
           <h2 className="font-[family-name:var(--font-heading)] text-2xl italic">Menuju Hari Bahagia</h2>
           <div className="mt-10">

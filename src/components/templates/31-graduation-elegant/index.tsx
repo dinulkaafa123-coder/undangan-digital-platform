@@ -64,7 +64,7 @@ export default function GraduationElegantTemplate({ data, templateSlug, guestNam
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#c9a24b] bg-[#0d1b3a] text-[#c9a24b]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[55vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroImage} alt={data.schoolName} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#f4f1e6] via-transparent to-transparent" />
@@ -82,7 +82,7 @@ export default function GraduationElegantTemplate({ data, templateSlug, guestNam
       </section>
 
       {/* ============ EVENT + AGENDA ============ */}
-      <section className="bg-[#0d1b3a] px-6 py-16 text-[#f4f1e6]">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#0d1b3a] px-6 text-[#f4f1e6]">
         <Reveal direction="scale" className="text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-[#c9a24b]">{formatFullDate(data.schedule.date)}</p>
           <div className="mt-8">

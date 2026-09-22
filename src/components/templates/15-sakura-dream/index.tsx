@@ -89,7 +89,7 @@ export default function SakuraDreamTemplate({ data, templateSlug, guestName }: I
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="bg-[#c98098] text-white" />
 
       {/* ============ HERO ============ */}
-      <section className="relative mx-auto max-w-lg overflow-hidden px-6 pt-16 text-center">
+      <section className="scene-h relative mx-auto flex max-w-lg flex-col items-center justify-center overflow-hidden px-6 text-center">
         <SakuraPetals count={8} />
         <Reveal direction="scale">
           <div className="mx-auto h-40 w-40 overflow-hidden rounded-full border-4 border-white shadow-[0_25px_50px_-15px_rgba(201,128,152,0.4)]">
@@ -131,7 +131,7 @@ export default function SakuraDreamTemplate({ data, templateSlug, guestName }: I
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="mx-auto max-w-lg px-6 py-16 text-center">
+      <section className="scene-h mx-auto flex max-w-lg flex-col items-center justify-center px-6 text-center">
         <Reveal direction="scale">
           <p className="text-xs uppercase tracking-widest text-[#a15b71]">Hitung Mundur</p>
           <div className="mt-6">

@@ -54,7 +54,7 @@ export default function AcademicBlueTemplate({ data, templateSlug, guestName }: 
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="bg-[#1c3d78] text-white" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[50vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroImage} alt={data.schoolName} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-[#1c3d78]/40" />
@@ -73,7 +73,7 @@ export default function AcademicBlueTemplate({ data, templateSlug, guestName }: 
       </section>
 
       {/* ============ COUNTDOWN ============ */}
-      <section className="bg-[#f0f4fb] px-6 py-16 text-center">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#f0f4fb] px-6 text-center">
         <Reveal direction="scale">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#1c3d78]">{formatFullDate(data.schedule.date)}</p>
           <div className="mt-8">

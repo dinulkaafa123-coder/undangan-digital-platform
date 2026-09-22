@@ -50,7 +50,7 @@ export default function ModernBusinessTemplate({ data, templateSlug, guestName }
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#7a8ba8] bg-white text-[#7a8ba8]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[45vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroImage} alt={data.companyName} className="h-full w-full object-cover" />
       </section>
@@ -83,7 +83,7 @@ export default function ModernBusinessTemplate({ data, templateSlug, guestName }
       )}
 
       {/* ============ COUNTDOWN ============ */}
-      <section className="px-6 py-14 text-center">
+      <section className="scene-h flex flex-col items-center justify-center px-6 text-center">
         <Reveal direction="editorial">
           <p className="text-xs uppercase tracking-[0.3em] text-[#7a8ba8]">Menuju Acara</p>
           <div className="mt-6">

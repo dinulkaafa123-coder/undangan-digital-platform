@@ -67,7 +67,7 @@ export default function CelestialLoveTemplate({ data, templateSlug, guestName }:
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#7c9fd4] bg-[#0a1128] text-[#7c9fd4] animate-pulse-glow" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[60vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         <FloatingParticles count={18} particleClassName="bg-white/70" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroPhotoUrl} alt="Pasangan" className="h-full w-full object-cover opacity-80" />
@@ -113,7 +113,7 @@ export default function CelestialLoveTemplate({ data, templateSlug, guestName }:
       </section>
 
       {/* ============ EVENT + COUNTDOWN ORBITAL ============ */}
-      <section className="border-y border-white/10 px-6 py-20 text-center">
+      <section className="scene-h flex flex-col items-center justify-center border-y border-white/10 px-6 text-center">
         <Reveal direction="scale">
           <h2 className="font-[family-name:var(--font-display)] text-2xl text-[#7c9fd4]">Menuju Hari Bahagia</h2>
           <div className="mt-10">

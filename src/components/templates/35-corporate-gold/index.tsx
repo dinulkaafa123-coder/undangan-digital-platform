@@ -51,7 +51,7 @@ export default function CorporateGoldTemplate({ data, templateSlug, guestName }:
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#c9a24b] bg-[#1a1206] text-[#c9a24b]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[55vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroImage} alt={data.companyName} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#f8e9c9] via-transparent to-transparent" />
@@ -83,7 +83,7 @@ export default function CorporateGoldTemplate({ data, templateSlug, guestName }:
       )}
 
       {/* ============ COUNTDOWN ============ */}
-      <section className="bg-[#3a1010] px-6 py-16 text-center text-[#f8e9c9]">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#3a1010] px-6 text-center text-[#f8e9c9]">
         <Reveal direction="scale">
           <p className="text-xs uppercase tracking-[0.3em] text-[#c9a24b]">{formatFullDate(data.schedule.date)}</p>
           <div className="mt-8">

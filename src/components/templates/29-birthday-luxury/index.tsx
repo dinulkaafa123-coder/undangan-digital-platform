@@ -63,7 +63,7 @@ export default function BirthdayLuxuryTemplate({ data, templateSlug, guestName }
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#c9a24b] bg-black text-[#c9a24b]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[60vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.celebrant.photoUrl} alt={data.celebrant.fullName} className="h-full w-full object-cover opacity-80 grayscale" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/50" />
@@ -83,7 +83,7 @@ export default function BirthdayLuxuryTemplate({ data, templateSlug, guestName }
       </section>
 
       {/* ============ COUNTDOWN ============ */}
-      <section className="border-y border-white/10 px-6 py-16 text-center">
+      <section className="scene-h flex flex-col items-center justify-center border-y border-white/10 px-6 text-center">
         <Reveal direction="scale">
           <p className="text-xs uppercase tracking-[0.3em] text-[#c9a24b]">{formatFullDate(data.schedule.date)}</p>
           <div className="mt-8">

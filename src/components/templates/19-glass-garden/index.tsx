@@ -74,7 +74,7 @@ export default function GlassGardenTemplate({ data, templateSlug, guestName }: I
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#2f5a44] bg-white/70 text-[#2f5a44] backdrop-blur-md" />
 
       {/* ============ HERO ============ */}
-      <section className="relative mx-auto max-w-lg px-6 pt-16 text-center">
+      <section className="scene-h relative mx-auto flex max-w-lg flex-col items-center justify-center px-6 text-center">
         <Reveal direction="blur-scale">
           <div className="mx-auto h-56 w-56 overflow-hidden rounded-full border border-white/60 bg-white/30 p-2 shadow-[0_25px_50px_-15px_rgba(47,90,68,0.25)] backdrop-blur-md">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -112,7 +112,7 @@ export default function GlassGardenTemplate({ data, templateSlug, guestName }: I
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="bg-[#2f5a44] px-6 py-20 text-center text-white">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#2f5a44] px-6 text-center text-white">
         <Reveal direction="scale">
           <h2 className="font-[family-name:var(--font-display)] text-2xl">Menuju Hari Bahagia</h2>
           <div className="mt-10">

@@ -69,7 +69,7 @@ export default function RoseCathedralTemplate({ data, templateSlug, guestName }:
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#d4af6a] bg-[#2a0d16] text-[#d4af6a]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative mx-auto max-w-lg px-6 pt-16 text-center">
+      <section className="scene-h relative mx-auto flex max-w-lg flex-col items-center justify-center px-6 text-center">
         <Reveal direction="unfold">
           <div className="relative mx-auto w-fit">
             <OrnamentCathedralArch className="absolute inset-0 h-full w-full text-[#d4af6a]" />
@@ -114,7 +114,7 @@ export default function RoseCathedralTemplate({ data, templateSlug, guestName }:
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="bg-[#2a0d16] px-6 py-20 text-center text-white">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#2a0d16] px-6 text-center text-white">
         <Reveal direction="scale">
           <h2 className="font-[family-name:var(--font-heading)] text-2xl italic">Menuju Hari Bahagia</h2>
           <div className="mt-10">

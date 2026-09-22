@@ -56,7 +56,7 @@ export default function LittlePrinceTemplate({ data, templateSlug, guestName }: 
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="bg-white text-[#5a7ab0] shadow-md" />
 
       {/* ============ CHILD PHOTO & NAME ============ */}
-      <section className="mx-auto max-w-sm px-6 pt-16 text-center">
+      <section className="scene-h mx-auto flex max-w-sm flex-col items-center justify-center px-6 text-center">
         <Reveal direction="scale">
           <div className="relative mx-auto h-56 w-56 overflow-hidden border-8 border-white bg-white shadow-[0_25px_50px_-15px_rgba(90,122,176,0.35)]" style={{ borderRadius: "45% 55% 60% 40% / 60% 50% 50% 40%" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -88,7 +88,7 @@ export default function LittlePrinceTemplate({ data, templateSlug, guestName }: 
       </section>
 
       {/* ============ WEDDING DATE + COUNTDOWN ============ */}
-      <section className="bg-[#5a7ab0] px-6 py-16 text-center text-white">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#5a7ab0] px-6 text-center text-white">
         <Reveal direction="scale">
           <p className="text-xs uppercase tracking-[0.3em] text-white/80">Insya Allah Pada</p>
           <p className="mt-2 font-[family-name:var(--font-display)] text-2xl">{formatFullDate(data.schedule.date)}</p>

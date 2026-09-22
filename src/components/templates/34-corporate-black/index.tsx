@@ -52,7 +52,7 @@ export default function CorporateBlackTemplate({ data, templateSlug, guestName }
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-black bg-white text-black" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[55vh] w-full overflow-hidden bg-black">
+      <section className="scene-h relative w-full overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroImage} alt={data.companyName} className="h-full w-full object-cover opacity-70 grayscale" />
         <div className="absolute inset-x-0 bottom-6 text-center">
@@ -84,7 +84,7 @@ export default function CorporateBlackTemplate({ data, templateSlug, guestName }
       )}
 
       {/* ============ COUNTDOWN ============ */}
-      <section className="bg-black px-6 py-16 text-center text-white">
+      <section className="scene-h flex flex-col items-center justify-center bg-black px-6 text-center text-white">
         <Reveal direction="scale">
           <p className="text-xs uppercase tracking-[0.3em] text-white/50">Menuju Acara</p>
           <div className="mt-8">

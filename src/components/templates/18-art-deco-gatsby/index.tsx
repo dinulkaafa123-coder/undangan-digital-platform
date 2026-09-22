@@ -67,7 +67,7 @@ export default function ArtDecoGatsbyTemplate({ data, templateSlug, guestName }:
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#c9a24b] bg-[#0c0c0c] text-[#c9a24b]" />
 
       {/* ============ HERO -- editorial ============ */}
-      <section className="mx-auto max-w-lg px-6 pt-16 text-center">
+      <section className="scene-h mx-auto flex max-w-lg flex-col items-center justify-center px-6 text-center">
         <Reveal direction="drop">
           <OrnamentDecoChevron className="mx-auto mb-4 h-4 w-40 text-[#0c0c0c]" />
           <h1 className="font-[family-name:var(--font-display)] text-4xl tracking-wide">
@@ -102,7 +102,7 @@ export default function ArtDecoGatsbyTemplate({ data, templateSlug, guestName }:
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="bg-[#0c0c0c] px-6 py-20 text-center text-[#f2ead9]">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#0c0c0c] px-6 text-center text-[#f2ead9]">
         <Reveal direction="scale">
           <h2 className="font-[family-name:var(--font-display)] text-2xl">Menuju Hari Bahagia</h2>
           <div className="mt-10">

@@ -63,7 +63,7 @@ export default function CrystalWeddingTemplate({ data, templateSlug, guestName }
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#9fb6c4] bg-white text-[#4a6a78]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[60vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroPhotoUrl} alt="Pasangan" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#eef3f7] via-transparent to-transparent" />
@@ -108,7 +108,7 @@ export default function CrystalWeddingTemplate({ data, templateSlug, guestName }
       </section>
 
       {/* ============ EVENT -- crystal cards ============ */}
-      <section className="relative overflow-hidden bg-[#0f1b22] px-6 py-20 text-white">
+      <section className="scene-h relative flex flex-col items-center justify-center overflow-hidden bg-[#0f1b22] px-6 text-white">
         <Reveal direction="scale" className="mb-14 text-center">
           <p className="text-xs uppercase tracking-[0.35em] text-[#9fb6c4]">Menuju Hari Bahagia</p>
           <div className="mt-8">

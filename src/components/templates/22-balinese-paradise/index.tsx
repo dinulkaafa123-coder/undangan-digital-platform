@@ -64,7 +64,7 @@ export default function BalinesePardiseTemplate({ data, templateSlug, guestName 
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#3f4a3a] bg-white/80 text-[#3f4a3a]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[58vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroPhotoUrl} alt="Pasangan" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#f3ede0] via-transparent to-transparent" />
@@ -109,7 +109,7 @@ export default function BalinesePardiseTemplate({ data, templateSlug, guestName 
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="bg-[#3f4a3a] px-6 py-20 text-center text-[#f3ede0]">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#3f4a3a] px-6 text-center text-[#f3ede0]">
         <Reveal direction="scale">
           <h2 className="font-[family-name:var(--font-display)] text-2xl">Menuju Hari Bahagia</h2>
           <div className="mt-10">

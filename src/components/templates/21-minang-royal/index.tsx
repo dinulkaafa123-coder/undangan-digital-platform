@@ -73,7 +73,7 @@ export default function MinangRoyalTemplate({ data, templateSlug, guestName }: I
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="bg-[#4a1420] text-[#d4af37]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative mx-auto max-w-lg px-6 pt-16 text-center">
+      <section className="scene-h relative mx-auto flex max-w-lg flex-col items-center justify-center px-6 text-center">
         <Reveal direction="depth">
           <div className="relative border-4 border-[#d4af37] p-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -108,7 +108,7 @@ export default function MinangRoyalTemplate({ data, templateSlug, guestName }: I
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="bg-[#4a1420] px-6 py-20 text-center text-[#fff6ec]">
+      <section className="scene-h flex flex-col items-center justify-center bg-[#4a1420] px-6 text-center text-[#fff6ec]">
         <OrnamentSongketDiamond className="mx-auto mb-12 h-4 w-40 text-[#d4af37]" />
         <Reveal direction="scale">
           <h2 className="font-[family-name:var(--font-display)] text-2xl">Menghitung Hari</h2>

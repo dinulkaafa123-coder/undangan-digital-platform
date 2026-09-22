@@ -54,7 +54,7 @@ export default function RamadhanGoldTemplate({ data, templateSlug, guestName }: 
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#d4af37] bg-[#1a1206] text-[#d4af37]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[50vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         <FloatingParticles count={10} particleClassName="bg-[#f5e2a8]/60" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroImage} alt={data.title} className="h-full w-full object-cover opacity-80" />
@@ -87,7 +87,7 @@ export default function RamadhanGoldTemplate({ data, templateSlug, guestName }: 
       )}
 
       {/* ============ COUNTDOWN ============ */}
-      <section className="relative overflow-hidden border-y border-[#d4af37]/20 px-6 py-16 text-center">
+      <section className="scene-h relative flex flex-col items-center justify-center overflow-hidden border-y border-[#d4af37]/20 px-6 text-center">
         <FloatingParticles count={12} particleClassName="bg-[#f5e2a8]/60" />
         <Reveal direction="scale" className="relative">
           <p className="text-xs uppercase tracking-[0.3em] text-[#d4af37]">Menuju Hari Acara</p>

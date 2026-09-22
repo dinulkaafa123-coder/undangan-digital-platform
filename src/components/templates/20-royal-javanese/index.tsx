@@ -72,7 +72,7 @@ export default function RoyalJavaneseTemplate({ data, templateSlug, guestName }:
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="bg-[#5c1a1a] text-[#d4af37]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative mx-auto max-w-lg px-6 pt-16 text-center">
+      <section className="scene-h relative mx-auto flex max-w-lg flex-col items-center justify-center px-6 text-center">
         <Reveal direction="unfold">
           <div className="relative border-[6px] border-double border-[#d4af37] p-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -107,7 +107,7 @@ export default function RoyalJavaneseTemplate({ data, templateSlug, guestName }:
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="relative overflow-hidden bg-[#5c1a1a] px-6 py-20 text-[#fff8ec]">
+      <section className="scene-h relative flex flex-col items-center justify-center overflow-hidden bg-[#5c1a1a] px-6 text-[#fff8ec]">
         <OrnamentGunungan className="pointer-events-none absolute bottom-0 left-1/2 h-64 w-auto -translate-x-1/2 text-[#d4af37]/10" />
         <OrnamentBatikBorder className="relative mx-auto mb-12 h-4 w-40 text-[#d4af37]" />
         <Reveal direction="scale" className="relative text-center">

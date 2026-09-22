@@ -56,7 +56,7 @@ export default function GraduationCinemaTemplate({ data, templateSlug, guestName
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#c9a24b] bg-black text-[#c9a24b]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[60vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.heroImage} alt={data.schoolName} className="h-full w-full object-cover opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/60" />
@@ -72,7 +72,7 @@ export default function GraduationCinemaTemplate({ data, templateSlug, guestName
       </section>
 
       {/* ============ COUNTDOWN ============ */}
-      <section className="border-y border-white/10 px-6 py-16 text-center">
+      <section className="scene-h flex flex-col items-center justify-center border-y border-white/10 px-6 text-center">
         <Reveal direction="scale">
           <div className="mt-2">
             <Countdown date={data.schedule.date} time={data.schedule.startTime} variant="film-reel" />

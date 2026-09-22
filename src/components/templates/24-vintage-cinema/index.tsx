@@ -62,7 +62,7 @@ export default function VintageCinemaTemplate({ data, templateSlug, guestName }:
       <MusicToggle url={data.music.url} autoPlay={isOpen} className="border border-[#c9a24b] bg-black text-[#c9a24b]" />
 
       {/* ============ HERO ============ */}
-      <section className="relative h-[65vh] w-full overflow-hidden">
+      <section className="scene-h relative w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={data.coverPhotoUrl} alt="Sampul" className="h-full w-full object-cover opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/60" />
@@ -102,7 +102,7 @@ export default function VintageCinemaTemplate({ data, templateSlug, guestName }:
       </section>
 
       {/* ============ EVENT + COUNTDOWN ============ */}
-      <section className="border-y border-white/10 px-6 py-20 text-center">
+      <section className="scene-h flex flex-col items-center justify-center border-y border-white/10 px-6 text-center">
         <Reveal direction="scale">
           <h2 className="font-[family-name:var(--font-display)] text-2xl text-[#c9a24b]">Menuju Hari Bahagia</h2>
           <div className="mt-10">
