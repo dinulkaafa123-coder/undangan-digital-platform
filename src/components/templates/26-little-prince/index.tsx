@@ -160,7 +160,7 @@ export default function LittlePrinceTemplate({ data, templateSlug, guestName }: 
       </section>
 
       {/* ============ CLOSING ============ */}
-      <footer className="px-6 py-14 text-center text-[#4a5c7c]">
+      <footer className="scene-h flex flex-col items-center justify-center px-6 text-center text-[#4a5c7c]">
         <OrnamentLittleCrown className="mx-auto mb-4 h-10 w-12 text-[#5a7ab0]" />
         <p className="font-[family-name:var(--font-display)] text-2xl text-[#2c3e5c]">{data.child.nickname}</p>
         <p className="mt-2 text-xs">Terima kasih atas doa restu Anda</p>

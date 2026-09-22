@@ -148,7 +148,7 @@ export default function CorporateGoldTemplate({ data, templateSlug, guestName }:
       </section>
 
       {/* ============ CLOSING ============ */}
-      <footer className="bg-[#1a1206] px-6 py-14 text-center text-[#c9a24b]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#1a1206] px-6 text-center text-[#c9a24b]">
         <p className="text-gold-gradient font-[family-name:var(--font-display)] text-xl">{data.companyName}</p>
       </footer>
     </div>

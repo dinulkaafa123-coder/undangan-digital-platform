@@ -153,7 +153,7 @@ export default function GraduationElegantTemplate({ data, templateSlug, guestNam
       </section>
 
       {/* ============ CLOSING ============ */}
-      <footer className="bg-[#0d1b3a] px-6 py-14 text-center text-[#c9a24b]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#0d1b3a] px-6 text-center text-[#c9a24b]">
         <OrnamentGraduationCap className="mx-auto mb-4 h-10 w-14" />
         <p className="text-gold-gradient font-[family-name:var(--font-display)] text-xl">{data.schoolName}</p>
         {data.committeeName && <p className="mt-2 text-xs text-[#cdd6f0]">{data.committeeName}</p>}

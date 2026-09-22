@@ -189,7 +189,7 @@ export default function ArtDecoGatsbyTemplate({ data, templateSlug, guestName }:
         </Reveal>
       </section>
 
-      <footer className="border-t border-[#0c0c0c]/10 px-6 py-14 text-center text-[#4a4335]">
+      <footer className="scene-h flex flex-col items-center justify-center border-t border-[#0c0c0c]/10 px-6 text-center text-[#4a4335]">
         <p className="font-[family-name:var(--font-display)] text-2xl text-[#0c0c0c]">
           {data.groom.nickname} &amp; {data.bride.nickname}
         </p>

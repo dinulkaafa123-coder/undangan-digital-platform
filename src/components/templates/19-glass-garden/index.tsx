@@ -198,7 +198,7 @@ export default function GlassGardenTemplate({ data, templateSlug, guestName }: I
         </Reveal>
       </section>
 
-      <footer className="bg-[#0c1f16] px-6 py-14 text-center text-[#bfe3d0]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#0c1f16] px-6 text-center text-[#bfe3d0]">
         <p className="font-[family-name:var(--font-display)] text-2xl text-white">
           {data.groom.nickname} &amp; {data.bride.nickname}
         </p>

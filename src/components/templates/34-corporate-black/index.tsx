@@ -153,7 +153,7 @@ export default function CorporateBlackTemplate({ data, templateSlug, guestName }
       </section>
 
       {/* ============ CLOSING ============ */}
-      <footer className="bg-black px-6 py-14 text-center text-white">
+      <footer className="scene-h flex flex-col items-center justify-center bg-black px-6 text-center text-white">
         <p className="font-[family-name:var(--font-display)] text-xl font-bold">{data.companyName}</p>
       </footer>
     </div>

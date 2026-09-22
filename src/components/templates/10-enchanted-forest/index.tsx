@@ -220,7 +220,7 @@ export default function EnchantedForestTemplate({ data, templateSlug, guestName 
         </Reveal>
       </section>
 
-      <footer className="bg-[#0a1a11] px-6 py-14 text-center text-[#e8cb84]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#0a1a11] px-6 text-center text-[#e8cb84]">
         <p className="font-[family-name:var(--font-heading)] text-3xl italic">
           {data.groom.nickname} &amp; {data.bride.nickname}
         </p>

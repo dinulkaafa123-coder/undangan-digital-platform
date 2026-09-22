@@ -170,7 +170,7 @@ export default function IslamicKidsTemplate({ data, templateSlug, guestName }: K
       </section>
 
       {/* ============ CLOSING ============ */}
-      <footer className="bg-[#0f5c3e] px-6 py-14 text-center text-[#f5d97a]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#0f5c3e] px-6 text-center text-[#f5d97a]">
         <OrnamentCrescentStar className="mx-auto mb-4 h-10 w-10" />
         <p className="font-[family-name:var(--font-heading)] text-2xl text-white">{data.child.nickname}</p>
         <p className="mt-3 text-xs text-[#cdeedd]">Jazakumullahu khairan atas doa restu Anda</p>

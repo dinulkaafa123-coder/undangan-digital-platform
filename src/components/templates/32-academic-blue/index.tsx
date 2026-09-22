@@ -144,7 +144,7 @@ export default function AcademicBlueTemplate({ data, templateSlug, guestName }: 
       </section>
 
       {/* ============ CLOSING ============ */}
-      <footer className="bg-[#1c3d78] px-6 py-14 text-center text-white">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#1c3d78] px-6 text-center text-white">
         <p className="font-[family-name:var(--font-display)] text-xl font-bold">{data.schoolName}</p>
         {data.committeeName && <p className="mt-2 text-xs text-white/70">{data.committeeName}</p>}
       </footer>

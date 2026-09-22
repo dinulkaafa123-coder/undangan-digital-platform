@@ -173,7 +173,7 @@ export default function LittleSultanTemplate({ data, templateSlug, guestName }: 
       </section>
 
       {/* ============ CLOSING ============ */}
-      <footer className="bg-[#1a2a5c] px-6 py-14 text-center text-[#d4af37]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#1a2a5c] px-6 text-center text-[#d4af37]">
         <OrnamentLittleCrown className="mx-auto mb-4 h-10 w-12" />
         <p className="text-gold-gradient font-[family-name:var(--font-display)] text-2xl">{data.child.nickname}</p>
         <p className="mt-3 text-xs text-[#cdd6f0]">Terima kasih atas doa restu Anda</p>

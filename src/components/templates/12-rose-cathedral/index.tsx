@@ -200,7 +200,7 @@ export default function RoseCathedralTemplate({ data, templateSlug, guestName }:
         </Reveal>
       </section>
 
-      <footer className="bg-[#2a0d16] px-6 py-14 text-center text-[#e7c9c0]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#2a0d16] px-6 text-center text-[#e7c9c0]">
         <p className="text-gold-gradient font-[family-name:var(--font-heading)] text-2xl italic">
           {data.groom.nickname} &amp; {data.bride.nickname}
         </p>

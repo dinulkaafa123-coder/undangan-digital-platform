@@ -217,7 +217,7 @@ export default function SakuraDreamTemplate({ data, templateSlug, guestName }: I
         </Reveal>
       </section>
 
-      <footer className="px-6 py-14 text-center text-[#a15b71]">
+      <footer className="scene-h flex flex-col items-center justify-center px-6 text-center text-[#a15b71]">
         <p className="font-[family-name:var(--font-heading)] text-3xl italic">
           {data.groom.nickname} &amp; {data.bride.nickname}
         </p>

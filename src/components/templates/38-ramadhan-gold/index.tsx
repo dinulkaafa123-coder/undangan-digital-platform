@@ -169,7 +169,7 @@ export default function RamadhanGoldTemplate({ data, templateSlug, guestName }: 
       )}
 
       {/* ============ CLOSING ============ */}
-      <footer className="px-6 py-14 text-center text-[#e2d6b8]">
+      <footer className="scene-h flex flex-col items-center justify-center px-6 text-center text-[#e2d6b8]">
         <OrnamentCrescentStar className="mx-auto mb-4 h-8 w-8 text-[#d4af37]" />
         <p className="text-gold-gradient font-[family-name:var(--font-heading)] text-xl">{data.title}</p>
       </footer>

@@ -148,7 +148,7 @@ export default function ModernBusinessTemplate({ data, templateSlug, guestName }
       </section>
 
       {/* ============ CLOSING ============ */}
-      <footer className="border-t border-[#e5e9f0] px-6 py-14 text-center text-[#5a6a8a]">
+      <footer className="scene-h flex flex-col items-center justify-center border-t border-[#e5e9f0] px-6 text-center text-[#5a6a8a]">
         <p className="font-[family-name:var(--font-display)] text-xl text-[#1a1a1a]">{data.companyName}</p>
       </footer>
     </div>

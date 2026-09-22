@@ -138,7 +138,7 @@ export default function GraduationCinemaTemplate({ data, templateSlug, guestName
       </section>
 
       {/* ============ CLOSING ============ */}
-      <footer className="px-6 py-14 text-center text-white/50">
+      <footer className="scene-h flex flex-col items-center justify-center px-6 text-center text-white/50">
         <p className="font-[family-name:var(--font-display)] text-xl text-[#c9a24b]">{data.schoolName}</p>
         {data.committeeName && <p className="mt-2 text-xs">{data.committeeName}</p>}
       </footer>

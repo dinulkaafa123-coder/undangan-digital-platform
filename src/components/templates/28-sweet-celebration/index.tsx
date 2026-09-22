@@ -153,7 +153,7 @@ export default function SweetCelebrationTemplate({ data, templateSlug, guestName
       </section>
 
       {/* ============ CLOSING ============ */}
-      <footer className="px-6 py-14 text-center text-[#8a5a6a]">
+      <footer className="scene-h flex flex-col items-center justify-center px-6 text-center text-[#8a5a6a]">
         <p className="font-[family-name:var(--font-display)] text-4xl text-[#c9789a]">{data.celebrant.nickname}</p>
         <p className="mt-2 text-xs">Terima kasih sudah merayakan hari spesialku 🎂</p>
       </footer>

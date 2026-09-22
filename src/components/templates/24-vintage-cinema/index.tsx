@@ -193,7 +193,7 @@ export default function VintageCinemaTemplate({ data, templateSlug, guestName }:
       </section>
 
       {/* ============ CLOSING -- ending credits ============ */}
-      <footer className="px-6 py-16 text-center text-white/60">
+      <footer className="scene-h flex flex-col items-center justify-center px-6 text-center text-white/60">
         <p className="text-xs uppercase tracking-[0.4em] text-[#c9a24b]">The End</p>
         <p className="mt-4 font-[family-name:var(--font-display)] text-3xl text-white">
           {data.groom.nickname} &amp; {data.bride.nickname}

@@ -202,7 +202,7 @@ export default function OceanPearlTemplate({ data, templateSlug, guestName }: In
         </Reveal>
       </section>
 
-      <footer className="bg-[#2c5f73] px-6 py-14 text-center text-white/80">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#2c5f73] px-6 text-center text-white/80">
         <p className="font-[family-name:var(--font-display)] text-2xl text-white">
           {data.groom.nickname} &amp; {data.bride.nickname}
         </p>

@@ -196,7 +196,7 @@ export default function MinangRoyalTemplate({ data, templateSlug, guestName }: I
         </Reveal>
       </section>
 
-      <footer className="bg-[#2a0a12] px-6 py-14 text-center text-[#d4af37]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#2a0a12] px-6 text-center text-[#d4af37]">
         <OrnamentSongketDiamond className="mx-auto mb-6 h-4 w-40" />
         <p className="text-gold-gradient font-[family-name:var(--font-display)] text-2xl">
           {data.groom.nickname} &amp; {data.bride.nickname}

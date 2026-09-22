@@ -204,7 +204,7 @@ export default function GoldenBallroomTemplate({ data, templateSlug, guestName }
         </Reveal>
       </section>
 
-      <footer className="bg-[#3a1010] px-6 py-14 text-center text-[#d4af37]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#3a1010] px-6 text-center text-[#d4af37]">
         <p className="text-gold-gradient font-[family-name:var(--font-display)] text-2xl">
           {data.groom.nickname} &amp; {data.bride.nickname}
         </p>

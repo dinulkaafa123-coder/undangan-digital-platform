@@ -166,7 +166,7 @@ export default function IslamicEmeraldTemplate({ data, templateSlug, guestName }
       )}
 
       {/* ============ CLOSING ============ */}
-      <footer className="bg-[#0f3d2e] px-6 py-14 text-center text-[#d4af37]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#0f3d2e] px-6 text-center text-[#d4af37]">
         <p className="font-[family-name:var(--font-heading)] text-2xl text-[#f6f1e2]">{data.title}</p>
         <p className="mt-3 text-xs">Jazakumullahu khairan atas doa restu Anda</p>
       </footer>

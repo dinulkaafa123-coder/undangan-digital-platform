@@ -140,7 +140,7 @@ export default function PartyPopTemplate({ data, templateSlug, guestName }: Birt
       </section>
 
       {/* ============ CLOSING ============ */}
-      <footer className="border-t-4 border-black bg-[#ff5c7a] px-6 py-14 text-center text-white">
+      <footer className="scene-h flex flex-col items-center justify-center border-t-4 border-black bg-[#ff5c7a] px-6 text-center text-white">
         <p className="font-[family-name:var(--font-display)] text-4xl font-black [text-shadow:2px_2px_0_#000]">{data.celebrant.nickname}</p>
         <p className="mt-2 text-xs font-semibold">Makasih udah dateng ke pestaku! 🎈</p>
       </footer>

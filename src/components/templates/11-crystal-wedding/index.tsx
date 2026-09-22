@@ -199,7 +199,7 @@ export default function CrystalWeddingTemplate({ data, templateSlug, guestName }
         </Reveal>
       </section>
 
-      <footer className="bg-[#0f1b22] px-6 py-14 text-center text-[#c7d6de]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#0f1b22] px-6 text-center text-[#c7d6de]">
         <p className="font-[family-name:var(--font-display)] text-2xl text-white">
           {data.groom.nickname} &amp; {data.bride.nickname}
         </p>

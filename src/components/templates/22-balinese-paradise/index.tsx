@@ -195,7 +195,7 @@ export default function BalinesePardiseTemplate({ data, templateSlug, guestName 
         </Reveal>
       </section>
 
-      <footer className="bg-[#2c3327] px-6 py-14 text-center text-[#cfe0c8]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#2c3327] px-6 text-center text-[#cfe0c8]">
         <p className="font-[family-name:var(--font-display)] text-2xl text-white">
           {data.groom.nickname} &amp; {data.bride.nickname}
         </p>

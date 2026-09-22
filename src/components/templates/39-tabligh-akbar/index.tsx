@@ -166,7 +166,7 @@ export default function TablighAkbarTemplate({ data, templateSlug, guestName }: 
       )}
 
       {/* ============ CLOSING ============ */}
-      <footer className="bg-[#3a1010] px-6 py-14 text-center text-[#d4af37]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#3a1010] px-6 text-center text-[#d4af37]">
         <OrnamentMinbar className="mx-auto mb-4 h-12 w-10" />
         <p className="text-gold-gradient font-[family-name:var(--font-heading)] text-xl">{data.title}</p>
       </footer>

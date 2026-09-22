@@ -195,7 +195,7 @@ export default function RoyalJavaneseTemplate({ data, templateSlug, guestName }:
         </Reveal>
       </section>
 
-      <footer className="relative overflow-hidden bg-[#5c1a1a] px-6 py-14 text-center text-[#d4af37]">
+      <footer className="scene-h relative flex flex-col items-center justify-center overflow-hidden bg-[#5c1a1a] px-6 text-center text-[#d4af37]">
         <OrnamentBatikBorder className="mx-auto mb-6 h-4 w-40 text-[#d4af37]" />
         <p className="text-gold-gradient font-[family-name:var(--font-display)] text-2xl">
           {data.groom.nickname} &amp; {data.bride.nickname}

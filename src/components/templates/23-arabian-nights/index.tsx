@@ -205,7 +205,7 @@ export default function ArabianNightsTemplate({ data, templateSlug, guestName }:
         </Reveal>
       </section>
 
-      <footer className="px-6 py-14 text-center text-[#cfd6e8]">
+      <footer className="scene-h flex flex-col items-center justify-center px-6 text-center text-[#cfd6e8]">
         <p className="text-gold-gradient font-[family-name:var(--font-display)] text-2xl">
           {data.groom.nickname} &amp; {data.bride.nickname}
         </p>

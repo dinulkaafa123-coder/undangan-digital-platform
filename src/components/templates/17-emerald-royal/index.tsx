@@ -191,7 +191,7 @@ export default function EmeraldRoyalTemplate({ data, templateSlug, guestName }: 
         </Reveal>
       </section>
 
-      <footer className="bg-[#06140f] px-6 py-14 text-center text-[#d4af37]">
+      <footer className="scene-h flex flex-col items-center justify-center bg-[#06140f] px-6 text-center text-[#d4af37]">
         <OrnamentCrest className="mx-auto mb-4 h-10 w-10" />
         <p className="text-gold-gradient font-[family-name:var(--font-display)] text-2xl">
           {data.groom.nickname} &amp; {data.bride.nickname}
