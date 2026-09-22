@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+html {
+  /* transform 3D pada template (perspective/rotateX/translateZ) bisa memicu
+     scrollbar horizontal 1px kalau tidak dijaga -- ini jaring pengamannya. */
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   Cinematic 3D Luxury toolkit -- dipakai bersama oleh 8 template
+   undangan. Semua animasi hanya menyentuh transform/opacity supaya
+   tetap GPU-friendly & ringan di HP.
+   ============================================================ */
+
+.perspective-1000 { perspective: 1000px; }
+.perspective-1600 { perspective: 1600px; }
+.preserve-3d { transform-style: preserve-3d; }
+.backface-hidden { backface-visibility: hidden; }
+
+.text-gold-gradient {
+  background: linear-gradient(115deg, #7a5a1e 0%, #d4af6a 22%, #fdf1c8 42%, #d4af6a 58%, #8a6a24 78%, #d4af6a 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: goldSheen 7s ease-in-out infinite;
+}
+
+@keyframes goldSheen {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -14px, 0); }
+}
+
+@keyframes floatSlower {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(0, -10px, 0) rotate(2deg); }
+}
+
+@keyframes kenburns {
+  0% { transform: scale3d(1.06, 1.06, 1); }
+  50% { transform: scale3d(1.14, 1.14, 1); }
+  100% { transform: scale3d(1.06, 1.06, 1); }
+}
+
+@keyframes shimmerSweep {
+  0% { transform: translateX(-130%) skewX(-15deg); }
+  100% { transform: translateX(230%) skewX(-15deg); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.85); }
+  50% { opacity: 0.9; transform: scale(1.15); }
+}
+
+@keyframes driftUp {
+  0% { transform: translate3d(0, 0, 0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translate3d(0, -120px, 0); opacity: 0; }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 106, 0.35); }
+  50% { box-shadow: 0 0 0 10px rgba(212, 175, 106, 0); }
+}
+
+@keyframes moonRise {
+  0% { transform: translate3d(0, 70px, 0); opacity: 0; }
+  100% { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+
+.animate-moon-rise { animation: moonRise 2.2s ease-out forwards; }
+.animate-float-slow { animation: floatSlow 6s ease-in-out infinite; }
+.animate-float-slower { animation: floatSlower 9s ease-in-out infinite; }
+.animate-kenburns { animation: kenburns 22s ease-in-out infinite; }
+.animate-twinkle { animation: twinkle 3.2s ease-in-out infinite; }
+.animate-spin-slow { animation: spinSlow 60s linear infinite; }
+.animate-pulse-glow { animation: pulseGlow 2.6s ease-in-out infinite; }
+
+.shimmer-sweep::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+  transform: translateX(-130%) skewX(-15deg);
+  animation: shimmerSweep 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes petalFall {
+  0% { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.9; }
+  100% { transform: translate3d(0, 60vh, 0) rotate(200deg); opacity: 0; }
+}
+
+@keyframes swayLeaf {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+
+@keyframes waveShift {
+  0% { background-position-x: 0; }
+  100% { background-position-x: -200px; }
+}
+
+@keyframes grainFlicker {
+  0%, 100% { opacity: 0.06; }
+  50% { opacity: 0.1; }
+}
+
+@keyframes orbitSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-petal-fall { animation: petalFall linear infinite; }
+.animate-sway-leaf { animation: swayLeaf 5s ease-in-out infinite; }
+.animate-wave-shift { animation: waveShift 6s linear infinite; }
+.animate-grain-flicker { animation: grainFlicker 0.4s steps(2) infinite; }
+.animate-orbit-spin { animation: orbitSpin linear infinite; }
+
+/* ============================================================
+   Fullscreen invitation toolkit -- dipakai redesign public invitation
+   (setiap section jadi "scene" 100dvh full-bleed, bukan card di atas
+   background putih). `dvh` dipakai supaya tinggi benar di mobile browser
+   (bar alamat yang collapse/expand tidak bikin section "loncat").
+   ============================================================ */
+.scene-h { min-height: 100vh; min-height: 100dvh; }
+
+/* Bentuk arch/gapura untuk photo treatment -- dipakai berbeda-beda per
+   template (Royal Gold, Islamic Majesty, dll) supaya foto tidak selalu
+   persegi/lingkaran seperti kebanyakan "card foto" biasa. */
+.clip-arch { clip-path: polygon(0% 100%, 0% 38%, 2% 30%, 6% 22%, 12% 15%, 20% 9%, 30% 5%, 40% 2%, 50% 1%, 60% 2%, 70% 5%, 80% 9%, 88% 15%, 94% 22%, 98% 30%, 100% 38%, 100% 100%); }
+.clip-arch-wide { clip-path: polygon(0% 100%, 0% 46%, 3% 34%, 10% 22%, 20% 13%, 32% 6%, 50% 2%, 68% 6%, 80% 13%, 90% 22%, 97% 34%, 100% 46%, 100% 100%); }
+
+/* Ken Burns lambat untuk foto full-bleed (background hero/opening). */
+.kenburns-slow { animation: kenburns 28s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .kenburns-slow, .animate-kenburns { animation: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
