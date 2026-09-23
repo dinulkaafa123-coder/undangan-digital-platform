@@ -107,7 +107,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-black-diamond/600/900",
     isPremium: true,
     isThreeD: true,
-    price: 179000,
+    price: 109000,
   },
   {
     id: "04",
@@ -152,7 +152,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-moonlight-romance/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 159000,
+    price: 99000,
   },
   {
     id: "07",
@@ -198,7 +198,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: true,
     badge: "exclusive",
-    price: 249000,
+    price: 149000,
   },
   {
     id: "10",
@@ -213,7 +213,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-enchanted-forest/600/900",
     isPremium: true,
     isThreeD: true,
-    price: 199000,
+    price: 129000,
   },
   {
     id: "11",
@@ -228,7 +228,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-crystal-wedding/600/900",
     isPremium: true,
     isThreeD: true,
-    price: 219000,
+    price: 139000,
   },
   {
     id: "12",
@@ -243,7 +243,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-rose-cathedral/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 189000,
+    price: 119000,
   },
   {
     id: "13",
@@ -258,7 +258,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-golden-ballroom/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 199000,
+    price: 129000,
   },
   {
     id: "14",
@@ -273,7 +273,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-celestial-love/600/900",
     isPremium: true,
     isThreeD: true,
-    price: 199000,
+    price: 129000,
   },
   {
     id: "15",
@@ -288,7 +288,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-sakura-dream/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 179000,
+    price: 109000,
   },
   {
     id: "16",
@@ -303,7 +303,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-ocean-pearl/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 189000,
+    price: 119000,
   },
   {
     id: "17",
@@ -318,7 +318,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-emerald-royal/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 199000,
+    price: 129000,
   },
   {
     id: "18",
@@ -333,7 +333,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-art-deco-gatsby/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 199000,
+    price: 129000,
   },
   {
     id: "19",
@@ -348,7 +348,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-glass-garden/600/900",
     isPremium: true,
     isThreeD: true,
-    price: 219000,
+    price: 139000,
   },
   {
     id: "20",
@@ -363,7 +363,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-royal-javanese/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 199000,
+    price: 129000,
   },
   {
     id: "21",
@@ -378,7 +378,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-minang-royal/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 199000,
+    price: 129000,
   },
   {
     id: "22",
@@ -393,7 +393,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-balinese-paradise/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 199000,
+    price: 129000,
   },
   {
     id: "23",
@@ -408,7 +408,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-arabian-nights/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 199000,
+    price: 129000,
   },
   {
     id: "24",
@@ -423,7 +423,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://picsum.photos/seed/tpl-vintage-cinema/600/900",
     isPremium: true,
     isThreeD: false,
-    price: 199000,
+    price: 129000,
   },
 
   // ===================== KHITANAN =====================
