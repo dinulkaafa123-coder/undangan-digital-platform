@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type ChangeEvent, type InputHTMLAttributes, type ReactNode, type TextareaHTMLAttributes } from "react";
 import type { GalleryPhoto } from "@/types/invitation";
-import { fileToCompressedDataUrl } from "@/lib/image-utils";
+import { uploadImage } from "@/lib/image-utils";
 import { makeId, cn } from "@/lib/utils";
 
 /** Kartu section form -- satu per bagian (Mempelai Pria, Akad, Galeri, dst). */
@@ -105,7 +105,7 @@ export function ImageUpload({ value, onChange, label = "Foto", shape = "square" 
     if (!file) return;
     setBusy(true);
     try {
-      const dataUrl = await fileToCompressedDataUrl(file);
+      const dataUrl = await uploadImage(file);
       onChange(dataUrl);
     } finally {
       setBusy(false);
@@ -158,7 +158,7 @@ export function GalleryUpload({ photos, onChange }: { photos: GalleryPhoto[]; on
     setBusy(true);
     try {
       const newPhotos: GalleryPhoto[] = await Promise.all(
-        files.map(async (file) => ({ id: makeId("gal"), url: await fileToCompressedDataUrl(file) }))
+        files.map(async (file) => ({ id: makeId("gal"), url: await uploadImage(file) }))
       );
       onChange([...photos, ...newPhotos]);
     } finally {
