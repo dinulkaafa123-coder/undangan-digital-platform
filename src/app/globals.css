@@ -59,6 +59,11 @@ body {
   50% { transform: translate3d(0, -10px, 0) rotate(2deg); }
 }
 
+@keyframes driftSide {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(16px, 0, 0); }
+}
+
 @keyframes kenburns {
   0% { transform: scale3d(1.06, 1.06, 1); }
   50% { transform: scale3d(1.14, 1.14, 1); }
@@ -100,6 +105,7 @@ body {
 .animate-moon-rise { animation: moonRise 2.2s ease-out forwards; }
 .animate-float-slow { animation: floatSlow 6s ease-in-out infinite; }
 .animate-float-slower { animation: floatSlower 9s ease-in-out infinite; }
+.animate-drift-side { animation: driftSide 8s ease-in-out infinite; }
 .animate-kenburns { animation: kenburns 22s ease-in-out infinite; }
 .animate-twinkle { animation: twinkle 3.2s ease-in-out infinite; }
 .animate-spin-slow { animation: spinSlow 60s linear infinite; }

@@ -583,3 +583,39 @@ export function OrnamentSpotlightCone({ className, style }: { className?: string
     </svg>
   );
 }
+
+/**
+ * Rumpun bambu -- siluet umum dataran tinggi Parahyangan, terinspirasi
+ * estetika Sunda secara luas (bukan objek adat/ritual tertentu).
+ */
+export function OrnamentBambooCluster({ className, style }: { className?: string; style?: CSSProperties }) {
+  return (
+    <svg viewBox="0 0 160 220" className={className} style={style} fill="none" stroke="currentColor" strokeWidth="1.3">
+      {[24, 60, 96, 132].map((x, i) => (
+        <g key={x}>
+          <path d={`M${x} 220 V${20 + (i % 2) * 16}`} strokeLinecap="round" />
+          {[1, 2, 3, 4, 5].map((seg) => (
+            <path key={seg} d={`M${x - 6} ${220 - seg * 34} H${x + 6}`} opacity="0.6" />
+          ))}
+          <path d={`M${x} ${30 + (i % 2) * 16} Q${x + 22} ${10 + (i % 2) * 16} ${x + 34} ${28 + (i % 2) * 10}`} opacity="0.7" strokeLinecap="round" />
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+/**
+ * Motif garis anyaman/tenun berlapis -- terinspirasi tradisi menenun
+ * Nusantara secara umum (pola geometris orisinal, bukan reproduksi
+ * kain adat/sakral tertentu).
+ */
+export function OrnamentWovenStripes({ className, style }: { className?: string; style?: CSSProperties }) {
+  return (
+    <svg viewBox="0 0 240 40" className={className} style={style} fill="none" stroke="currentColor" strokeWidth="1.2" preserveAspectRatio="none">
+      <path d="M0 6 H240 M0 34 H240" strokeWidth="2" />
+      {Array.from({ length: 16 }).map((_, i) => (
+        <path key={i} d={`M${i * 15} 6 L${i * 15 + 8} 20 L${i * 15} 34`} opacity={i % 2 ? 0.9 : 0.5} />
+      ))}
+    </svg>
+  );
+}

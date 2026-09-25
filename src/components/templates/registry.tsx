@@ -43,6 +43,9 @@ import TablighAkbar from "./39-tabligh-akbar";
 import InfinityMirror from "./40-infinity-mirror";
 import EternalOrbit from "./41-eternal-orbit";
 import LivingBloom from "./42-living-bloom";
+import JavaEternal from "./43-java-eternal";
+import SundaEternal from "./44-sunda-eternal";
+import BatakEternal from "./45-batak-eternal";
 
 /**
  * Registry pusat: templateId/slug -> komponen renderer, lintas SEMUA
@@ -104,6 +107,9 @@ export const templateRegistry: Record<string, AnyEventTemplateComponent> = {
   "infinity-mirror": InfinityMirror,
   "eternal-orbit": EternalOrbit,
   "living-bloom": LivingBloom,
+  "java-eternal": JavaEternal,
+  "sunda-eternal": SundaEternal,
+  "batak-eternal": BatakEternal,
 } as unknown as Record<string, AnyEventTemplateComponent>;
 
 export function getTemplateComponent(slug: string): AnyEventTemplateComponent | undefined {
