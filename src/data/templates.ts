@@ -12,7 +12,8 @@ export type TemplateCategory =
   | "royal"
   | "cinematic"
   | "destination"
-  | "3d";
+  | "3d"
+  | "4d";
 
 export interface CategoryMeta {
   id: TemplateCategory;
@@ -33,6 +34,7 @@ export const categories: CategoryMeta[] = [
   { id: "elegant", label: "Elegant", description: "Anggun & timeless" },
   { id: "minimalist", label: "Minimalist", description: "Bersih & clean luxury" },
   { id: "3d", label: "3D", description: "Depth & animasi sinematik nyata" },
+  { id: "4d", label: "4D", description: "Depth berlapis yang bergerak terus-menerus, terasa hidup" },
 ];
 
 export type TemplateBadge = "new" | "best-seller" | "exclusive";
@@ -57,7 +59,17 @@ export interface TemplateMeta {
   isPremium: boolean;
   /** ditandai saat depth/3D (perspective, rotateX/Y, translateZ) jadi ciri khas utama template */
   isThreeD: boolean;
-  /** badge tambahan di kartu katalog -- terpisah dari badge Premium/3D/Gratis yang otomatis */
+  /**
+   * "4D" -- bukan istilah CSS/web sungguhan, ini label pemasaran untuk
+   * tingkat di atas 3D: bukan cuma depth statis, tapi BEBERAPA lapisan
+   * depth yang terus bergerak tanpa henti (parallax kuat, rotasi/ayunan
+   * berkelanjutan di kecepatan berbeda per lapisan) -- dimensi ke-4 =
+   * waktu/gerak. Selalu dipasangkan dengan `isThreeD: true` karena
+   * teknik dasarnya tetap CSS 3D biasa (perspective/translateZ/rotateX),
+   * cuma animasinya jauh lebih hidup & terus-menerus.
+   */
+  isFourD?: boolean;
+  /** badge tambahan di kartu katalog -- terpisah dari badge Premium/3D/4D/Gratis yang otomatis */
   badge?: TemplateBadge;
   price: number;
 }
@@ -668,6 +680,57 @@ export const templates: TemplateMeta[] = [
     isThreeD: false,
     badge: "new",
     price: 99000,
+  },
+  {
+    id: "40",
+    slug: "infinity-mirror",
+    name: "Infinity Mirror",
+    tagline: "Lorong cermin tak berujung, berlapis dan terus bergerak",
+    category: "4d",
+    tags: ["4d", "3d", "luxury"],
+    description:
+      "Potret mempelai dipantulkan berlapis-lapis menuju kedalaman tanpa akhir, tiap lapisan berputar pelan dengan kecepatan berbeda -- undangan yang benar-benar terasa hidup, bukan gambar diam.",
+    colors: ["#0d0d0f", "#c9c9c9", "#d4af37"],
+    thumbnail: "https://picsum.photos/seed/tpl-infinity-mirror/600/900",
+    isPremium: true,
+    isThreeD: true,
+    isFourD: true,
+    badge: "exclusive",
+    price: 149000,
+  },
+  {
+    id: "41",
+    slug: "eternal-orbit",
+    name: "Eternal Orbit",
+    tagline: "Cincin cahaya mengorbit tanpa henti mengelilingi kalian",
+    category: "4d",
+    tags: ["4d", "3d", "cinematic"],
+    description:
+      "Tiga cincin cahaya melayang di kedalaman berbeda, masing-masing berputar dengan arah & kecepatannya sendiri mengelilingi potret mempelai -- dimensi keempat: waktu yang terus berjalan.",
+    colors: ["#0a0a2e", "#e8cb84", "#9fb6c4"],
+    thumbnail: "https://picsum.photos/seed/tpl-eternal-orbit/600/900",
+    isPremium: true,
+    isThreeD: true,
+    isFourD: true,
+    badge: "exclusive",
+    price: 149000,
+  },
+  {
+    id: "42",
+    slug: "living-bloom",
+    name: "Living Bloom",
+    tagline: "Taman berlapis yang daun & kelopaknya tidak pernah diam",
+    category: "4d",
+    tags: ["4d", "3d", "floral"],
+    description:
+      "Empat lapisan dedaunan dan kelopak bergoyang di kedalamannya masing-masing sepanjang waktu, seolah taman itu benar-benar hidup di sekitar kisah cinta kalian.",
+    colors: ["#4a6b52", "#e8b4c8", "#faf6ef"],
+    thumbnail: "https://picsum.photos/seed/tpl-living-bloom/600/900",
+    isPremium: true,
+    isThreeD: true,
+    isFourD: true,
+    badge: "exclusive",
+    price: 139000,
   },
 ];
 

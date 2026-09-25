@@ -50,13 +50,14 @@ export function TemplateCard({ template }: { template: TemplateMeta }) {
               {BADGE_LABELS[template.badge]}
             </span>
           )}
-          {template.isPremium ? (
-            <span className="rounded-full bg-amber-400 px-3 py-1 text-[11px] font-semibold text-black shadow-sm">
-              {template.isThreeD ? "Premium 3D" : "Premium"}
-            </span>
-          ) : (
-            <span className="rounded-full bg-emerald-500 px-3 py-1 text-[11px] font-semibold text-white shadow-sm">Gratis</span>
-          )}
+          <span
+            className={cn(
+              "rounded-full px-3 py-1 text-[11px] font-semibold shadow-sm",
+              template.isFourD ? "bg-fuchsia-500 text-white" : "bg-amber-400 text-black"
+            )}
+          >
+            {template.isFourD ? "Premium 4D" : template.isThreeD ? "Premium 3D" : "Premium"}
+          </span>
         </div>
       </Link>
 

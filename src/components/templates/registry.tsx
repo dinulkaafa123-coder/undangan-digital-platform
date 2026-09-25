@@ -40,6 +40,9 @@ import ModernBusiness from "./36-modern-business";
 import IslamicEmerald from "./37-islamic-emerald";
 import RamadhanGold from "./38-ramadhan-gold";
 import TablighAkbar from "./39-tabligh-akbar";
+import InfinityMirror from "./40-infinity-mirror";
+import EternalOrbit from "./41-eternal-orbit";
+import LivingBloom from "./42-living-bloom";
 
 /**
  * Registry pusat: templateId/slug -> komponen renderer, lintas SEMUA
@@ -98,6 +101,9 @@ export const templateRegistry: Record<string, AnyEventTemplateComponent> = {
   "islamic-emerald": IslamicEmerald,
   "ramadhan-gold": RamadhanGold,
   "tabligh-akbar": TablighAkbar,
+  "infinity-mirror": InfinityMirror,
+  "eternal-orbit": EternalOrbit,
+  "living-bloom": LivingBloom,
 } as unknown as Record<string, AnyEventTemplateComponent>;
 
 export function getTemplateComponent(slug: string): AnyEventTemplateComponent | undefined {

@@ -9,7 +9,7 @@ import { DigitalInvitationPreview, InvitationPreviewScene, type PreviewScene } f
 import { templates, getTemplateBySlug, getTemplateEventType, categories } from "@/data/templates";
 import { getTemplatePreview } from "@/data/template-previews";
 import { getEventTypeMeta, type EventType } from "@/types/event";
-import { formatRupiah } from "@/lib/utils";
+import { formatRupiah, cn } from "@/lib/utils";
 
 const PREVIEW_SCENES: { scene: PreviewScene; label: string }[] = [
   { scene: "cover", label: "Cover" },
@@ -119,11 +119,14 @@ export default async function TemplateDetailPage({ params }: PageProps<"/templat
                 <span className="rounded-full bg-black/5 px-3 py-1 text-xs font-medium capitalize text-black/70">
                   {categoryMeta?.label ?? template.category}
                 </span>
-                {template.isPremium ? (
-                  <span className="rounded-full bg-amber-400 px-3 py-1 text-xs font-semibold text-black">{template.isThreeD ? "Premium 3D" : "Premium"}</span>
-                ) : (
-                  <span className="rounded-full bg-emerald-500 px-3 py-1 text-xs font-semibold text-white">Gratis</span>
-                )}
+                <span
+                  className={cn(
+                    "rounded-full px-3 py-1 text-xs font-semibold",
+                    template.isFourD ? "bg-fuchsia-500 text-white" : "bg-amber-400 text-black"
+                  )}
+                >
+                  {template.isFourD ? "Premium 4D" : template.isThreeD ? "Premium 3D" : "Premium"}
+                </span>
               </div>
 
               <h1 className="mt-4 text-3xl font-bold text-black">{template.name}</h1>
