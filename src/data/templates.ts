@@ -89,7 +89,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: false,
     badge: "best-seller",
-    price: 149000,
+    price: 100000,
   },
   {
     id: "02",
@@ -104,7 +104,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 79000,
+    price: 30000,
   },
   {
     id: "03",
@@ -119,7 +119,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: true,
-    price: 109000,
+    price: 60000,
   },
   {
     id: "04",
@@ -134,7 +134,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 129000,
+    price: 80000,
   },
   {
     id: "05",
@@ -149,7 +149,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1596457221755-b96bc3a6df18?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 149000,
+    price: 100000,
   },
   {
     id: "06",
@@ -164,7 +164,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 99000,
+    price: 50000,
   },
   {
     id: "07",
@@ -179,7 +179,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1621801306185-8c0ccf9c8eb8?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 79000,
+    price: 30000,
   },
   {
     id: "08",
@@ -194,7 +194,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 149000,
+    price: 100000,
   },
   {
     id: "09",
@@ -210,7 +210,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: true,
     badge: "exclusive",
-    price: 149000,
+    price: 100000,
   },
   {
     id: "10",
@@ -225,7 +225,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1599462616558-2b75fd26a283?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: true,
-    price: 129000,
+    price: 80000,
   },
   {
     id: "11",
@@ -240,7 +240,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1607357910286-1ff94ac13c24?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: true,
-    price: 139000,
+    price: 90000,
   },
   {
     id: "12",
@@ -255,7 +255,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1606216836537-eea72a939072?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 119000,
+    price: 70000,
   },
   {
     id: "13",
@@ -270,7 +270,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1630526720753-aa4e71acf67d?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 129000,
+    price: 80000,
   },
   {
     id: "14",
@@ -285,7 +285,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1621621667797-e06afc217fb0?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: true,
-    price: 129000,
+    price: 80000,
   },
   {
     id: "15",
@@ -300,7 +300,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 109000,
+    price: 60000,
   },
   {
     id: "16",
@@ -315,7 +315,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 119000,
+    price: 70000,
   },
   {
     id: "17",
@@ -330,7 +330,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 129000,
+    price: 80000,
   },
   {
     id: "18",
@@ -345,7 +345,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 129000,
+    price: 80000,
   },
   {
     id: "19",
@@ -360,7 +360,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1596457221755-b96bc3a6df18?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: true,
-    price: 139000,
+    price: 90000,
   },
   {
     id: "20",
@@ -375,7 +375,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 129000,
+    price: 80000,
   },
   {
     id: "21",
@@ -390,7 +390,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1621801306185-8c0ccf9c8eb8?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 129000,
+    price: 80000,
   },
   {
     id: "22",
@@ -405,7 +405,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 129000,
+    price: 80000,
   },
   {
     id: "23",
@@ -420,7 +420,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1563808599481-34a342e44508?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 129000,
+    price: 80000,
   },
   {
     id: "24",
@@ -435,7 +435,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1599462616558-2b75fd26a283?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 129000,
+    price: 80000,
   },
 
   // ===================== KHITANAN =====================
@@ -452,7 +452,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1744973004605-118c8be37da4?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 99000,
+    price: 50000,
   },
   {
     id: "26",
@@ -467,7 +467,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1707745735856-fbe8004d0301?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 79000,
+    price: 30000,
   },
   {
     id: "27",
@@ -482,7 +482,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1641886000796-b244614d453b?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 99000,
+    price: 50000,
   },
 
   // ===================== BIRTHDAY =====================
@@ -499,7 +499,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1544155892-b2b6c64204fc?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 79000,
+    price: 30000,
   },
   {
     id: "29",
@@ -514,7 +514,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1608790672275-309c02d888ff?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 129000,
+    price: 80000,
   },
   {
     id: "30",
@@ -529,7 +529,7 @@ export const templates: TemplateMeta[] = [
     thumbnail: "https://images.unsplash.com/photo-1516668557604-c8e814fdb184?w=600&h=900&fit=crop&crop=faces&auto=format&q=80",
     isPremium: true,
     isThreeD: false,
-    price: 79000,
+    price: 30000,
   },
 
   // ===================== SEKOLAH / WISUDA =====================
@@ -547,7 +547,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: false,
     badge: "new",
-    price: 99000,
+    price: 50000,
   },
   {
     id: "32",
@@ -563,7 +563,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: false,
     badge: "new",
-    price: 79000,
+    price: 30000,
   },
   {
     id: "33",
@@ -579,7 +579,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: false,
     badge: "new",
-    price: 99000,
+    price: 50000,
   },
 
   // ===================== CORPORATE =====================
@@ -597,7 +597,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: false,
     badge: "new",
-    price: 79000,
+    price: 30000,
   },
   {
     id: "35",
@@ -613,7 +613,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: false,
     badge: "new",
-    price: 129000,
+    price: 80000,
   },
   {
     id: "36",
@@ -629,7 +629,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: false,
     badge: "new",
-    price: 79000,
+    price: 30000,
   },
 
   // ===================== KEAGAMAAN =====================
@@ -647,7 +647,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: false,
     badge: "new",
-    price: 99000,
+    price: 50000,
   },
   {
     id: "38",
@@ -663,7 +663,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: false,
     badge: "new",
-    price: 99000,
+    price: 50000,
   },
   {
     id: "39",
@@ -679,7 +679,7 @@ export const templates: TemplateMeta[] = [
     isPremium: true,
     isThreeD: false,
     badge: "new",
-    price: 99000,
+    price: 50000,
   },
   {
     id: "40",
@@ -696,7 +696,7 @@ export const templates: TemplateMeta[] = [
     isThreeD: true,
     isFourD: true,
     badge: "exclusive",
-    price: 149000,
+    price: 100000,
   },
   {
     id: "41",
@@ -713,7 +713,7 @@ export const templates: TemplateMeta[] = [
     isThreeD: true,
     isFourD: true,
     badge: "exclusive",
-    price: 149000,
+    price: 100000,
   },
   {
     id: "42",
@@ -730,7 +730,7 @@ export const templates: TemplateMeta[] = [
     isThreeD: true,
     isFourD: true,
     badge: "exclusive",
-    price: 139000,
+    price: 90000,
   },
   {
     id: "43",
@@ -747,7 +747,7 @@ export const templates: TemplateMeta[] = [
     isThreeD: true,
     isFourD: true,
     badge: "exclusive",
-    price: 149000,
+    price: 100000,
   },
   {
     id: "44",
@@ -764,7 +764,7 @@ export const templates: TemplateMeta[] = [
     isThreeD: true,
     isFourD: true,
     badge: "exclusive",
-    price: 139000,
+    price: 90000,
   },
   {
     id: "45",
@@ -781,7 +781,7 @@ export const templates: TemplateMeta[] = [
     isThreeD: true,
     isFourD: true,
     badge: "exclusive",
-    price: 149000,
+    price: 100000,
   },
 ];
 
