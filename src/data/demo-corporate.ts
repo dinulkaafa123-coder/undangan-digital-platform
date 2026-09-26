@@ -8,12 +8,12 @@ export const demoCorporate: CorporateEventData = {
   speaker: {
     name: "Bapak Andra Wijaya",
     title: "Chief Executive Officer",
-    photoUrl: "https://picsum.photos/seed/corporate-speaker/500/500",
+    photoUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=500&fit=crop&crop=faces&auto=format&q=80",
   },
   description:
     "Merayakan 10 tahun perjalanan PT Cipta Nusantara Digital, kami mengundang seluruh karyawan dan mitra untuk hadir dalam Annual Gathering & Company Anniversary 2026.",
-  coverImage: "https://picsum.photos/seed/corporate-cover/900/1600",
-  heroImage: "https://picsum.photos/seed/corporate-hero/1200/1400",
+  coverImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&h=1600&fit=crop&crop=faces&auto=format&q=80",
+  heroImage: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=1400&fit=crop&crop=faces&auto=format&q=80",
   agenda: [
     { id: "c1", time: "09.00 - 09.30", activity: "Registrasi & Welcome Coffee" },
     { id: "c2", time: "09.30 - 10.00", activity: "Sambutan Direktur Utama" },
@@ -34,10 +34,10 @@ export const demoCorporate: CorporateEventData = {
   },
   contactPerson: { name: "Divisi HR & GA", phone: "0812-3456-7890" },
   gallery: [
-    { id: "cg1", url: "https://picsum.photos/seed/corp-1/700/900" },
-    { id: "cg2", url: "https://picsum.photos/seed/corp-2/900/700" },
-    { id: "cg3", url: "https://picsum.photos/seed/corp-3/700/900" },
-    { id: "cg4", url: "https://picsum.photos/seed/corp-4/700/700" },
+    { id: "cg1", url: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=700&h=900&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "cg2", url: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=900&h=700&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "cg3", url: "https://images.unsplash.com/photo-1561489404-42f13a2f09a2?w=700&h=900&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "cg4", url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&h=700&fit=crop&crop=faces&auto=format&q=80" },
   ],
   music: {
     title: "Corporate Ambient",

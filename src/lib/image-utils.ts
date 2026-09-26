@@ -63,7 +63,7 @@ export function fileToCompressedDataUrl(file: File, maxDim = 1280, quality = 0.8
  * `event_data` (JSONB) membuat setiap baris undangan jadi besar (tiap
  * foto bisa ratusan KB sebagai teks), boros ruang & lambat diambil.
  * Menyimpan file asli di Storage dan cuma URL-nya di database jauh
- * lebih ringan -- sama seperti field foto lain (mis. dari picsum.photos)
+ * lebih ringan -- sama seperti field foto lain (mis. dari images.unsplash.com)
  * yang dari awal memang cuma berupa URL pendek.
  *
  * Kalau Supabase belum dikonfigurasi ATAU upload gagal (mis. offline),

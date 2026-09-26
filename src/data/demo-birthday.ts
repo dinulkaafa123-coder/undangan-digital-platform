@@ -13,10 +13,10 @@ export const demoBirthday: BirthdayEventData = {
     fullName: "Kirana Ayu Kurniawan",
     nickname: "Kirana",
     age: 17,
-    photoUrl: "https://picsum.photos/seed/birthday-kirana/700/900",
+    photoUrl: "https://images.unsplash.com/photo-1544155892-b2b6c64204fc?w=700&h=900&fit=crop&crop=faces&auto=format&q=80",
   },
-  coverImage: "https://picsum.photos/seed/birthday-cover/900/1600",
-  heroImage: "https://picsum.photos/seed/birthday-hero/1200/1400",
+  coverImage: "https://images.unsplash.com/photo-1608790672275-309c02d888ff?w=900&h=1600&fit=crop&crop=faces&auto=format&q=80",
+  heroImage: "https://images.unsplash.com/photo-1516668557604-c8e814fdb184?w=1200&h=1400&fit=crop&crop=faces&auto=format&q=80",
   schedule: {
     id: "birthday-event",
     name: "Pesta Ulang Tahun",
@@ -29,10 +29,10 @@ export const demoBirthday: BirthdayEventData = {
     mapsEmbedSrc: "https://www.google.com/maps?q=Bandung&output=embed",
   },
   gallery: [
-    { id: "bg1", url: "https://picsum.photos/seed/bday-1/700/900" },
-    { id: "bg2", url: "https://picsum.photos/seed/bday-2/900/700" },
-    { id: "bg3", url: "https://picsum.photos/seed/bday-3/700/900" },
-    { id: "bg4", url: "https://picsum.photos/seed/bday-4/700/700" },
+    { id: "bg1", url: "https://images.unsplash.com/photo-1509666537727-9154b6962292?w=700&h=900&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "bg2", url: "https://images.unsplash.com/photo-1533294160622-d5fece3e080d?w=900&h=700&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "bg3", url: "https://images.unsplash.com/photo-1544155892-b2b6c64204fc?w=700&h=900&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "bg4", url: "https://images.unsplash.com/photo-1608790672275-309c02d888ff?w=700&h=700&fit=crop&crop=faces&auto=format&q=80" },
   ],
   music: {
     title: "Happy Birthday Instrumental",

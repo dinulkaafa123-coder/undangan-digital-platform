@@ -111,7 +111,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Alex Brush', cursive",
     bodyFont: "'Playfair Display', serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-royal-gold/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "white-palace": {
@@ -124,7 +124,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cormorant Garamond', serif",
     bodyFont: "'Jost', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-white-palace/500/700",
+    photoUrl: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=500&h=700&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "black-diamond": {
@@ -137,7 +137,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cinzel', serif",
     bodyFont: "'Montserrat', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-black-diamond/500/700",
+    photoUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?w=500&h=700&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "secret-garden": {
@@ -150,7 +150,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Yesteryear', cursive",
     bodyFont: "'Quicksand', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-secret-garden/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "petals",
   },
   "islamic-majesty": {
@@ -163,7 +163,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Amiri', serif",
     bodyFont: "'Poppins', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-islamic-majesty/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1596457221755-b96bc3a6df18?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "moonlight-romance": {
@@ -176,7 +176,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cormorant Garamond', serif",
     bodyFont: "'Jost', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-moonlight-romance/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "stars",
   },
   "rustic-romance": {
@@ -189,7 +189,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Caveat', cursive",
     bodyFont: "'Nunito', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-rustic-romance/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1621801306185-8c0ccf9c8eb8?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "nusantara-heritage": {
@@ -202,7 +202,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Playfair Display', serif",
     bodyFont: "'Lora', serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-nusantara-heritage/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "diamond-palace-3d": {
@@ -215,7 +215,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cinzel', serif",
     bodyFont: "'Cormorant Garamond', serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-diamond-palace/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1563808599481-34a342e44508?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "enchanted-forest": {
@@ -228,7 +228,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cormorant Garamond', serif",
     bodyFont: "'Quicksand', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-enchanted-forest/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1599462616558-2b75fd26a283?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "crystal-wedding": {
@@ -241,7 +241,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cormorant Garamond', serif",
     bodyFont: "'Comfortaa', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-crystal-wedding/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1607357910286-1ff94ac13c24?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "rose-cathedral": {
@@ -254,7 +254,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cormorant Garamond', serif",
     bodyFont: "'Lora', serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-rose-cathedral/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1606216836537-eea72a939072?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "golden-ballroom": {
@@ -267,7 +267,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cinzel', serif",
     bodyFont: "'Poppins', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-golden-ballroom/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1630526720753-aa4e71acf67d?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "celestial-love": {
@@ -280,7 +280,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Marcellus', serif",
     bodyFont: "'Tenor Sans', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-celestial-love/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1621621667797-e06afc217fb0?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "stars",
   },
   "sakura-dream": {
@@ -293,7 +293,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cormorant Garamond', serif",
     bodyFont: "'Nunito', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-sakura-dream/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "petals",
   },
   "ocean-pearl": {
@@ -306,7 +306,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Tenor Sans', sans-serif",
     bodyFont: "'Jost', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-ocean-pearl/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "emerald-royal": {
@@ -319,7 +319,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cinzel', serif",
     bodyFont: "'Lora', serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-emerald-royal/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "art-deco-gatsby": {
@@ -332,7 +332,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Bodoni Moda', serif",
     bodyFont: "'Poppins', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-art-deco-gatsby/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "glass-garden": {
@@ -345,7 +345,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Comfortaa', sans-serif",
     bodyFont: "'Quicksand', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-glass-garden/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1596457221755-b96bc3a6df18?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "royal-javanese": {
@@ -358,7 +358,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Playfair Display', serif",
     bodyFont: "'Lora', serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-royal-javanese/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "minang-royal": {
@@ -371,7 +371,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cinzel', serif",
     bodyFont: "'Lora', serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-minang-royal/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1621801306185-8c0ccf9c8eb8?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "balinese-paradise": {
@@ -384,7 +384,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Italiana', serif",
     bodyFont: "'Quicksand', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-balinese-paradise/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "arabian-nights": {
@@ -397,7 +397,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Amiri', serif",
     bodyFont: "'Montserrat', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-arabian-nights/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1563808599481-34a342e44508?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "stars",
   },
   "vintage-cinema": {
@@ -410,7 +410,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Bodoni Moda', serif",
     bodyFont: "'Montserrat', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-vintage-cinema/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1599462616558-2b75fd26a283?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
 
@@ -424,7 +424,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cinzel', serif",
     bodyFont: "'Poppins', sans-serif",
     ...KHITANAN,
-    photoUrl: "https://picsum.photos/seed/prev-little-sultan/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1744973004605-118c8be37da4?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "little-prince": {
@@ -437,7 +437,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Comfortaa', sans-serif",
     bodyFont: "'Nunito', sans-serif",
     ...KHITANAN,
-    photoUrl: "https://picsum.photos/seed/prev-little-prince/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1707745735856-fbe8004d0301?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "stars",
   },
   "islamic-kids": {
@@ -450,7 +450,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Amiri', serif",
     bodyFont: "'Quicksand', sans-serif",
     ...KHITANAN,
-    photoUrl: "https://picsum.photos/seed/prev-islamic-kids/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1641886000796-b244614d453b?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
 
@@ -464,7 +464,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Caveat', cursive",
     bodyFont: "'Quicksand', sans-serif",
     ...BIRTHDAY,
-    photoUrl: "https://picsum.photos/seed/prev-sweet-celebration/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1544155892-b2b6c64204fc?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "confetti",
   },
   "birthday-luxury": {
@@ -477,7 +477,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cinzel', serif",
     bodyFont: "'Montserrat', sans-serif",
     ...BIRTHDAY,
-    photoUrl: "https://picsum.photos/seed/prev-birthday-luxury/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1608790672275-309c02d888ff?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "party-pop": {
@@ -490,7 +490,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Poppins', sans-serif",
     bodyFont: "'Nunito', sans-serif",
     ...BIRTHDAY,
-    photoUrl: "https://picsum.photos/seed/prev-party-pop/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1516668557604-c8e814fdb184?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "confetti",
   },
 
@@ -504,7 +504,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Playfair Display', serif",
     bodyFont: "'Lora', serif",
     ...school("SMA Negeri 1 Harapan Bangsa"),
-    photoUrl: "https://picsum.photos/seed/prev-graduation-elegant/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "academic-blue": {
@@ -517,7 +517,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Poppins', sans-serif",
     bodyFont: "'Jost', sans-serif",
     ...school("SMA Negeri 1 Harapan Bangsa"),
-    photoUrl: "https://picsum.photos/seed/prev-academic-blue/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "graduation-cinema": {
@@ -530,7 +530,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Bodoni Moda', serif",
     bodyFont: "'Montserrat', sans-serif",
     ...school("SMA Negeri 1 Harapan Bangsa"),
-    photoUrl: "https://picsum.photos/seed/prev-graduation-cinema/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1525921429624-479b6a26d84d?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
 
@@ -544,7 +544,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Montserrat', sans-serif",
     bodyFont: "'Jost', sans-serif",
     ...corporate("PT CIPTA NUSANTARA DIGITAL"),
-    photoUrl: "https://picsum.photos/seed/prev-corporate-black/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "corporate-gold": {
@@ -557,7 +557,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cinzel', serif",
     bodyFont: "'Montserrat', sans-serif",
     ...corporate("PT CIPTA NUSANTARA DIGITAL"),
-    photoUrl: "https://picsum.photos/seed/prev-corporate-gold/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "modern-business": {
@@ -570,7 +570,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Tenor Sans', sans-serif",
     bodyFont: "'Jost', sans-serif",
     ...corporate("PT CIPTA NUSANTARA DIGITAL"),
-    photoUrl: "https://picsum.photos/seed/prev-modern-business/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
 
@@ -584,7 +584,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Amiri', serif",
     bodyFont: "'Lora', serif",
     ...religious("PENGAJIAN AKBAR", "Meraih Keberkahan dalam Kehidupan"),
-    photoUrl: "https://picsum.photos/seed/prev-islamic-emerald/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1606981693736-62d6c4954ba5?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "ramadhan-gold": {
@@ -597,7 +597,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Amiri', serif",
     bodyFont: "'Quicksand', sans-serif",
     ...religious("RAMADHAN KAREEM", "Menyambut Bulan Penuh Berkah"),
-    photoUrl: "https://picsum.photos/seed/prev-ramadhan-gold/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1540567736792-f78f6242e4e0?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "tabligh-akbar": {
@@ -610,7 +610,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Amiri', serif",
     bodyFont: "'Montserrat', sans-serif",
     ...religious("TABLIGH AKBAR", "Menjaga Hati, Menjaga Iman"),
-    photoUrl: "https://picsum.photos/seed/prev-tabligh-akbar/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1670514862391-df20ad00b330?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "infinity-mirror": {
@@ -623,7 +623,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Bodoni Moda', serif",
     bodyFont: "'Tenor Sans', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-infinity-mirror/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1607357910286-1ff94ac13c24?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "eternal-orbit": {
@@ -636,7 +636,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cinzel', serif",
     bodyFont: "'Cormorant Garamond', serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-eternal-orbit/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1606216836537-eea72a939072?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "stars",
   },
   "living-bloom": {
@@ -649,7 +649,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cormorant Garamond', serif",
     bodyFont: "'Yesteryear', cursive",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-living-bloom/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1630526720753-aa4e71acf67d?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "petals",
   },
   "java-eternal": {
@@ -662,7 +662,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Marcellus', serif",
     bodyFont: "'Cormorant Garamond', serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-java-eternal/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1621621667797-e06afc217fb0?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
   "sunda-eternal": {
@@ -675,7 +675,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cormorant Garamond', serif",
     bodyFont: "'Quicksand', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-sunda-eternal/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "none",
   },
   "batak-eternal": {
@@ -688,7 +688,7 @@ export const templatePreviews: Record<string, PreviewConfig> = {
     displayFont: "'Cinzel', serif",
     bodyFont: "'Montserrat', sans-serif",
     ...WEDDING,
-    photoUrl: "https://picsum.photos/seed/prev-batak-eternal/500/600",
+    photoUrl: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
     particles: "gold",
   },
 };
@@ -704,7 +704,7 @@ const FALLBACK_PREVIEW: PreviewConfig = {
   displayFont: "'Playfair Display', serif",
   bodyFont: "'Jost', sans-serif",
   ...WEDDING,
-  photoUrl: "https://picsum.photos/seed/prev-fallback/500/600",
+  photoUrl: "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=500&h=600&fit=crop&crop=faces&auto=format&q=80",
   particles: "none",
 };
 

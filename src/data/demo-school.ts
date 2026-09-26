@@ -10,8 +10,8 @@ export const demoSchool: SchoolEventData = {
   committeeName: "Panitia Wisuda SMA Negeri 1 Harapan Bangsa",
   description:
     "Dengan penuh syukur, kami mengundang Bapak/Ibu/Wali Murid untuk hadir dalam acara Wisuda dan Pelepasan siswa-siswi kelas XII Angkatan 2026.",
-  coverImage: "https://picsum.photos/seed/school-cover/900/1600",
-  heroImage: "https://picsum.photos/seed/school-hero/1200/1400",
+  coverImage: "https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=900&h=1600&fit=crop&crop=faces&auto=format&q=80",
+  heroImage: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200&h=1400&fit=crop&crop=faces&auto=format&q=80",
   agenda: [
     { id: "a1", time: "08.00 - 08.30", activity: "Registrasi Peserta" },
     { id: "a2", time: "08.30 - 09.00", activity: "Pembukaan & Menyanyikan Lagu Indonesia Raya" },
@@ -31,10 +31,10 @@ export const demoSchool: SchoolEventData = {
     mapsEmbedSrc: "https://www.google.com/maps?q=Yogyakarta&output=embed",
   },
   gallery: [
-    { id: "sg1", url: "https://picsum.photos/seed/school-1/700/900" },
-    { id: "sg2", url: "https://picsum.photos/seed/school-2/900/700" },
-    { id: "sg3", url: "https://picsum.photos/seed/school-3/700/900" },
-    { id: "sg4", url: "https://picsum.photos/seed/school-4/700/700" },
+    { id: "sg1", url: "https://images.unsplash.com/photo-1525921429624-479b6a26d84d?w=700&h=900&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "sg2", url: "https://images.unsplash.com/photo-1498079022511-d15614cb1c02?w=900&h=700&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "sg3", url: "https://images.unsplash.com/photo-1496469888073-80de7e952517?w=700&h=900&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "sg4", url: "https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=700&h=700&fit=crop&crop=faces&auto=format&q=80" },
   ],
   music: {
     title: "Graduation Theme Instrumental",

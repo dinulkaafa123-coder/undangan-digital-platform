@@ -17,14 +17,14 @@ export const demoKhitanan: KhitananEventData = {
     fullName: "Muhammad Fajar Ramadhan",
     nickname: "Fajar",
     childOrder: "Putra kedua dari",
-    photoUrl: "https://picsum.photos/seed/khitan-fajar/700/900",
+    photoUrl: "https://images.unsplash.com/photo-1744973004605-118c8be37da4?w=700&h=900&fit=crop&crop=faces&auto=format&q=80",
     parents: {
       father: "Bapak Rizal Hidayat",
       mother: "Ibu Novi Andriani",
     },
   },
-  coverImage: "https://picsum.photos/seed/khitan-cover/900/1600",
-  heroImage: "https://picsum.photos/seed/khitan-hero/1200/1400",
+  coverImage: "https://images.unsplash.com/photo-1707745735856-fbe8004d0301?w=900&h=1600&fit=crop&crop=faces&auto=format&q=80",
+  heroImage: "https://images.unsplash.com/photo-1641886000796-b244614d453b?w=1200&h=1400&fit=crop&crop=faces&auto=format&q=80",
   schedule: {
     id: "khitan-event",
     name: "Walimatul Khitan",
@@ -37,10 +37,10 @@ export const demoKhitanan: KhitananEventData = {
     mapsEmbedSrc: "https://www.google.com/maps?q=Bekasi&output=embed",
   },
   gallery: [
-    { id: "kg1", url: "https://picsum.photos/seed/khitan-1/700/900" },
-    { id: "kg2", url: "https://picsum.photos/seed/khitan-2/900/700" },
-    { id: "kg3", url: "https://picsum.photos/seed/khitan-3/700/900" },
-    { id: "kg4", url: "https://picsum.photos/seed/khitan-4/700/700" },
+    { id: "kg1", url: "https://images.unsplash.com/photo-1744973004605-118c8be37da4?w=700&h=900&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "kg2", url: "https://images.unsplash.com/photo-1707745735856-fbe8004d0301?w=900&h=700&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "kg3", url: "https://images.unsplash.com/photo-1641886000796-b244614d453b?w=700&h=900&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "kg4", url: "https://images.unsplash.com/photo-1744973004605-118c8be37da4?w=700&h=700&fit=crop&crop=faces&auto=format&q=80" },
   ],
   music: {
     title: "Sholawat Instrumental",

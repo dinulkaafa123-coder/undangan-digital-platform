@@ -8,12 +8,12 @@ export const demoReligious: ReligiousEventData = {
   speaker: {
     name: "Ustadz H. Ahmad Fauzi, Lc.",
     title: "Pendakwah & Pengasuh Majelis Taklim Nurul Hidayah",
-    photoUrl: "https://picsum.photos/seed/religious-speaker/500/500",
+    photoUrl: "https://images.unsplash.com/photo-1758685734511-4f49ce9a382b?w=500&h=500&fit=crop&crop=faces&auto=format&q=80",
   },
   description:
     "Marilah bersama-sama meraih keberkahan dalam kehidupan dengan menghadiri Tabligh Akbar dalam rangka menyambut Tahun Baru Hijriah, bersama Ustadz H. Ahmad Fauzi, Lc.",
-  coverImage: "https://picsum.photos/seed/religious-cover/900/1600",
-  heroImage: "https://picsum.photos/seed/religious-hero/1200/1400",
+  coverImage: "https://images.unsplash.com/photo-1606981693736-62d6c4954ba5?w=900&h=1600&fit=crop&auto=format&q=80",
+  heroImage: "https://images.unsplash.com/photo-1540567736792-f78f6242e4e0?w=1200&h=1400&fit=crop&auto=format&q=80",
   agenda: [
     { id: "r1", time: "19.00 - 19.30", activity: "Registrasi & Sholat Isya Berjamaah" },
     { id: "r2", time: "19.30 - 20.00", activity: "Pembukaan & Pembacaan Ayat Suci Al-Qur'an" },
@@ -32,10 +32,10 @@ export const demoReligious: ReligiousEventData = {
     mapsEmbedSrc: "https://www.google.com/maps?q=Bandung&output=embed",
   },
   gallery: [
-    { id: "rg1", url: "https://picsum.photos/seed/religious-1/700/900" },
-    { id: "rg2", url: "https://picsum.photos/seed/religious-2/900/700" },
-    { id: "rg3", url: "https://picsum.photos/seed/religious-3/700/900" },
-    { id: "rg4", url: "https://picsum.photos/seed/religious-4/700/700" },
+    { id: "rg1", url: "https://images.unsplash.com/photo-1670514862391-df20ad00b330?w=700&h=900&fit=crop&auto=format&q=80" },
+    { id: "rg2", url: "https://images.unsplash.com/photo-1681073126033-8d89682e10be?w=900&h=700&fit=crop&auto=format&q=80" },
+    { id: "rg3", url: "https://images.unsplash.com/photo-1569924259120-22d9307489cf?w=700&h=900&fit=crop&auto=format&q=80" },
+    { id: "rg4", url: "https://images.unsplash.com/photo-1606981693736-62d6c4954ba5?w=700&h=700&fit=crop&auto=format&q=80" },
   ],
   music: {
     title: "Nasyid Instrumental",

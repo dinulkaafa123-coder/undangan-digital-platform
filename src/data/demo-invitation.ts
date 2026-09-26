@@ -16,7 +16,7 @@ export const demoInvitation: InvitationData = {
       father: "Bapak Hendra Wijaya",
       mother: "Ibu Siti Rahayu",
     },
-    photoUrl: "https://picsum.photos/seed/aditya-groom/600/800",
+    photoUrl: "https://images.unsplash.com/photo-1606216769783-a7dbe227a17f?w=600&h=800&fit=crop&crop=faces&auto=format&q=80",
     instagram: "@aditya.pratama",
   },
   bride: {
@@ -27,7 +27,7 @@ export const demoInvitation: InvitationData = {
       father: "Bapak Budi Santoso",
       mother: "Ibu Ratna Kusuma",
     },
-    photoUrl: "https://picsum.photos/seed/alya-bride/600/800",
+    photoUrl: "https://images.unsplash.com/photo-1532454781337-fc3edff34f91?w=600&h=800&fit=crop&crop=faces&auto=format&q=80",
     instagram: "@alya.maharani",
   },
   quote: {
@@ -35,8 +35,8 @@ export const demoInvitation: InvitationData = {
       "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.",
     source: "QS. Ar-Rum: 21",
   },
-  coverPhotoUrl: "https://picsum.photos/seed/wedding-cover-main/900/1600",
-  heroPhotoUrl: "https://picsum.photos/seed/wedding-hero-couple/1200/1400",
+  coverPhotoUrl: "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=900&h=1600&fit=crop&crop=faces&auto=format&q=80",
+  heroPhotoUrl: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1200&h=1400&fit=crop&crop=faces&auto=format&q=80",
   events: [
     {
       id: "akad",
@@ -70,7 +70,7 @@ export const demoInvitation: InvitationData = {
       title: "Pertama Bertemu",
       description:
         "Kami dipertemukan pertama kali di sebuah acara kampus. Obrolan singkat waktu itu ternyata jadi awal dari cerita panjang kami berdua.",
-      photoUrl: "https://picsum.photos/seed/love-story-1/800/800",
+      photoUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
     },
     {
       id: "story-2",
@@ -78,7 +78,7 @@ export const demoInvitation: InvitationData = {
       title: "Menjalin Hubungan",
       description:
         "Setelah beberapa bulan dekat dan saling mengenal, Aditya memberanikan diri untuk mengajak Alya menjalin hubungan yang lebih serius.",
-      photoUrl: "https://picsum.photos/seed/love-story-2/800/800",
+      photoUrl: "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
     },
     {
       id: "story-3",
@@ -86,7 +86,7 @@ export const demoInvitation: InvitationData = {
       title: "Lamaran",
       description:
         "Di depan keluarga besar kedua belah pihak, Aditya resmi melamar Alya. Air mata bahagia mewarnai momen sakral tersebut.",
-      photoUrl: "https://picsum.photos/seed/love-story-3/800/800",
+      photoUrl: "https://images.unsplash.com/photo-1596457221755-b96bc3a6df18?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
     },
     {
       id: "story-4",
@@ -94,16 +94,16 @@ export const demoInvitation: InvitationData = {
       title: "Hari Bahagia",
       description:
         "Dengan restu kedua orang tua, kami memutuskan untuk melanjutkan hubungan ini ke jenjang pernikahan yang InsyaAllah penuh berkah.",
-      photoUrl: "https://picsum.photos/seed/love-story-4/800/800",
+      photoUrl: "https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
     },
   ],
   gallery: [
-    { id: "g1", url: "https://picsum.photos/seed/gallery-1/700/900" },
-    { id: "g2", url: "https://picsum.photos/seed/gallery-2/900/700" },
-    { id: "g3", url: "https://picsum.photos/seed/gallery-3/700/900" },
-    { id: "g4", url: "https://picsum.photos/seed/gallery-4/700/700" },
-    { id: "g5", url: "https://picsum.photos/seed/gallery-5/900/700" },
-    { id: "g6", url: "https://picsum.photos/seed/gallery-6/700/900" },
+    { id: "g1", url: "https://images.unsplash.com/photo-1621801306185-8c0ccf9c8eb8?w=700&h=900&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "g2", url: "https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?w=900&h=700&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "g3", url: "https://images.unsplash.com/photo-1563808599481-34a342e44508?w=700&h=900&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "g4", url: "https://images.unsplash.com/photo-1599462616558-2b75fd26a283?w=700&h=700&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "g5", url: "https://images.unsplash.com/photo-1607357910286-1ff94ac13c24?w=900&h=700&fit=crop&crop=faces&auto=format&q=80" },
+    { id: "g6", url: "https://images.unsplash.com/photo-1606216836537-eea72a939072?w=700&h=900&fit=crop&crop=faces&auto=format&q=80" },
   ],
   music: {
     title: "A Thousand Years",
