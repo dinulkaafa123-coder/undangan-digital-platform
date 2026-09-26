@@ -6,13 +6,13 @@ import QRCode from "qrcode";
 import type { EventData, EventType } from "@/types/event";
 import { getEventTypeMeta } from "@/types/event";
 import { createInvitation, updateInvitation, suggestSlugBase, type InvitationRecord } from "@/lib/invitations";
-import { createPaymentTransaction, getPaymentStatus, loadMidtransSnap, snapPay, type SnapResult } from "@/lib/payments";
+import { createPaymentTransaction, getPaymentChannels, getPaymentStatus, type PaymentChannel } from "@/lib/payments";
 import { copyToClipboard } from "@/lib/utils";
 
-type Stage = "summary" | "paying" | "pending" | "working" | "success" | "error";
+type Stage = "summary" | "choose-method" | "creating" | "pending" | "working" | "success" | "error";
 
 const POLL_INTERVAL_MS = 4000;
-const POLL_TIMEOUT_MS = 5 * 60 * 1000;
+const POLL_TIMEOUT_MS = 10 * 60 * 1000; // Tripay lebih sering async (VA/QR) -- kasih waktu lebih lama dari sekadar popup kartu.
 
 function getPublicUrl(slug: string): string {
   const base = typeof window !== "undefined" && window.location.origin ? window.location.origin : "http://localhost:3000";
@@ -96,6 +96,9 @@ export function PublishFlow({
   const [record, setRecord] = useState<InvitationRecord | null>(null);
   const [qrDataUrl, setQrDataUrl] = useState("");
   const [copied, setCopied] = useState(false);
+  const [channels, setChannels] = useState<PaymentChannel[]>([]);
+  const [channelsLoading, setChannelsLoading] = useState(false);
+  const [checkoutUrl, setCheckoutUrl] = useState<string | null>(null);
   const pollRef = useRef<{ interval: number; timeout: number } | null>(null);
 
   const eventTypeMeta = getEventTypeMeta(eventType);
@@ -194,36 +197,38 @@ export function PublishFlow({
       return;
     }
 
-    // mode "activate": tidak ada template gratis -- selalu lewat Midtrans dulu.
+    // mode "activate": tidak ada template gratis -- selalu pilih metode bayar dulu lewat Tripay.
     if (!templatePrice || templatePrice <= 0) {
       setError("Template ini belum memiliki harga yang valid. Hubungi kami sebelum mengaktifkan undangan ini.");
       setStage("error");
       return;
     }
 
-    setStage("paying");
+    setStage("choose-method");
+    setChannelsLoading(true);
     setError("");
     try {
-      await loadMidtransSnap();
-      const { token, orderId } = await createPaymentTransaction(templateId);
-      snapPay(token, {
-        onSuccess: (result: SnapResult) => finalizeWithOrder(result.order_id),
-        onPending: (result: SnapResult) => {
-          setStage("pending");
-          startPolling(result.order_id);
-        },
-        onError: () => {
-          setError("Pembayaran gagal diproses. Silakan coba lagi.");
-          setStage("error");
-        },
-        onClose: () => {
-          // Pengunjung menutup popup Snap tanpa menyelesaikan pembayaran --
-          // biarkan mereka kembali ke ringkasan untuk coba lagi.
-          setStage((current) => (current === "paying" ? "summary" : current));
-        },
-      });
+      const list = await getPaymentChannels();
+      setChannels(list);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Gagal membuka halaman pembayaran. Coba lagi.");
+      setError(e instanceof Error ? e.message : "Gagal mengambil daftar metode pembayaran.");
+      setStage("error");
+    } finally {
+      setChannelsLoading(false);
+    }
+  }
+
+  async function handleChooseMethod(method: string) {
+    setStage("creating");
+    setError("");
+    try {
+      const result = await createPaymentTransaction(templateId, method);
+      setCheckoutUrl(result.checkoutUrl);
+      window.open(result.checkoutUrl, "_blank", "noopener,noreferrer");
+      setStage("pending");
+      startPolling(result.orderId);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Gagal membuat transaksi pembayaran.");
       setStage("error");
     }
   }
@@ -279,7 +284,7 @@ export function PublishFlow({
             </div>
             {mode === "activate" && (
               <p className="mt-3 text-xs text-black/40">
-                Pembayaran diproses aman lewat Midtrans (QRIS, e-wallet, transfer bank, kartu). Undangan aktif otomatis setelah pembayaran terverifikasi.
+                Pembayaran diproses aman lewat Tripay (QRIS, e-wallet, transfer bank, minimarket). Undangan aktif otomatis setelah pembayaran terverifikasi.
               </p>
             )}
             <div className="mt-6 flex gap-3">
@@ -287,16 +292,53 @@ export function PublishFlow({
                 Batal
               </button>
               <button type="button" onClick={handleConfirm} className="flex-1 rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-black/80">
-                {mode === "update" ? "Ya, Simpan" : `Bayar ${formatRupiah(templatePrice)} & Aktifkan`}
+                {mode === "update" ? "Ya, Simpan" : `Pilih Metode Bayar`}
               </button>
             </div>
           </>
         )}
 
-        {stage === "paying" && (
+        {stage === "choose-method" && (
+          <>
+            <h2 className="text-lg font-bold text-black">Pilih Metode Pembayaran</h2>
+            <p className="mt-1 text-sm text-black/60">Total: <span className="font-bold text-black">{formatRupiah(templatePrice)}</span></p>
+            <div className="mt-4 max-h-80 space-y-2 overflow-y-auto">
+              {channelsLoading && (
+                <div className="flex flex-col items-center gap-3 py-8 text-center">
+                  <div className="h-6 w-6 animate-spin rounded-full border-2 border-black/15 border-t-black" />
+                  <p className="text-xs text-black/50">Memuat metode pembayaran...</p>
+                </div>
+              )}
+              {!channelsLoading && channels.length === 0 && (
+                <p className="py-6 text-center text-sm text-black/50">Belum ada metode pembayaran yang tersedia saat ini.</p>
+              )}
+              {!channelsLoading &&
+                channels.map((ch) => (
+                  <button
+                    key={ch.code}
+                    type="button"
+                    onClick={() => handleChooseMethod(ch.code)}
+                    className="flex w-full items-center gap-3 rounded-xl border border-black/10 px-4 py-3 text-left transition-colors hover:border-black/30 hover:bg-black/[0.02]"
+                  >
+                    {ch.iconUrl && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={ch.iconUrl} alt={ch.name} className="h-6 w-10 object-contain" />
+                    )}
+                    <span className="flex-1 text-sm font-medium text-black">{ch.name}</span>
+                    <span className="text-xs text-black/40">{ch.group}</span>
+                  </button>
+                ))}
+            </div>
+            <button type="button" onClick={onClose} className="mt-4 w-full rounded-full border border-black/15 px-5 py-2.5 text-sm font-semibold text-black/70 transition-colors hover:border-black/40">
+              Batal
+            </button>
+          </>
+        )}
+
+        {stage === "creating" && (
           <div className="flex flex-col items-center gap-3 py-10 text-center">
             <div className="h-8 w-8 animate-spin rounded-full border-2 border-black/15 border-t-black" />
-            <p className="text-sm text-black/60">Membuka halaman pembayaran...</p>
+            <p className="text-sm text-black/60">Membuat transaksi pembayaran...</p>
           </div>
         )}
 
@@ -305,8 +347,13 @@ export function PublishFlow({
             <div className="h-8 w-8 animate-spin rounded-full border-2 border-black/15 border-t-black" />
             <p className="text-sm font-medium text-black">Menunggu konfirmasi pembayaran...</p>
             <p className="max-w-xs text-xs text-black/50">
-              Selesaikan pembayaran sesuai instruksi (mis. transfer VA). Halaman ini akan otomatis lanjut begitu pembayaran Anda terkonfirmasi -- jangan tutup halaman ini.
+              Selesaikan pembayaran di tab yang baru terbuka (QR/nomor VA/instruksi lainnya). Halaman ini akan otomatis lanjut begitu pembayaran Anda terkonfirmasi -- jangan tutup halaman ini.
             </p>
+            {checkoutUrl && (
+              <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="mt-1 text-xs font-semibold text-black underline underline-offset-2">
+                Buka lagi halaman pembayaran
+              </a>
+            )}
           </div>
         )}
 
