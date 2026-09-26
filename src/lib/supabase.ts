@@ -10,8 +10,8 @@ import { createClient, type SupabaseClient } from "@supabase/supabase-js";
  *
  * Client di file ini TIDAK PERNAH memakai service_role key. Satu-satunya
  * pengecualian di seluruh aplikasi ada di `src/app/api/payments/notification/route.ts`
- * (webhook Tripay, server-only, tidak pernah diimpor komponen client) --
- * di sana service_role dipakai SETELAH signature Tripay diverifikasi,
+ * (webhook Duitku, server-only, tidak pernah diimpor komponen client) --
+ * di sana service_role dipakai SETELAH signature Duitku diverifikasi,
  * untuk menuliskan status pembayaran yang sudah terbukti sah. Client
  * Supabase bersama ini tetap hanya untuk anon key.
  */

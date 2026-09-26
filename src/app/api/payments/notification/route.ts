@@ -3,70 +3,57 @@ import { createHmac } from "crypto";
 import { createClient } from "@supabase/supabase-js";
 
 /**
- * Webhook server-to-server dari Tripay ("Callback URL" -- diisi otomatis
- * per transaksi lewat `callback_url` saat create, dan sebaiknya juga
- * diisi sebagai default di Tripay Dashboard > Merchant > Pengaturan).
- * TIDAK PERNAH dipanggil dari browser, jadi aman memakai
- * SUPABASE_SERVICE_ROLE_KEY di sini -- satu-satunya tempat di seluruh
- * kode aplikasi yang memakainya. Key ini HARUS disimpan sebagai
- * server-only env var (TANPA prefix NEXT_PUBLIC_).
+ * Webhook server-to-server dari Duitku ("Callback URL" -- dikirim per
+ * transaksi lewat `callbackUrl` saat create, sebaiknya juga diisi sebagai
+ * default di Duitku Merchant Portal). TIDAK PERNAH dipanggil dari
+ * browser, jadi aman memakai SUPABASE_SERVICE_ROLE_KEY di sini --
+ * satu-satunya tempat di seluruh kode aplikasi yang memakainya.
  *
- * Setiap callback WAJIB diverifikasi signature-nya (header
- * `X-Callback-Signature`) sebelum status pembayaran di database diubah --
- * ini satu-satunya penjaga supaya orang tidak bisa memalsukan "sudah
- * bayar" dengan mengirim POST palsu ke sini. Signature Tripay dihitung
- * dari BODY MENTAH (raw), jadi harus dibaca sebagai teks dulu sebelum
- * di-parse JSON -- kalau di-parse lalu di-stringify ulang, hasilnya bisa
- * beda karakter (spasi/urutan key) dan signature tidak akan cocok.
+ * Beda dengan Midtrans/Tripay: Duitku mengirim body sebagai
+ * `application/x-www-form-urlencoded` (bukan JSON), dan signature-nya
+ * adalah SALAH SATU FIELD di body itu sendiri (bukan header terpisah).
+ * Formula-nya juga BEDA urutan dari signature saat create transaksi:
+ * `HMAC_SHA256(merchantCode + amount + merchantOrderId, apiKey)`.
  */
-function mapTripayStatus(status: string): "settlement" | "expired" | "failed" | "pending" | null {
-  switch (status) {
-    case "PAID":
-      return "settlement";
-    case "EXPIRED":
-      return "expired";
-    case "FAILED":
-    case "REFUND":
-      return "failed";
-    case "UNPAID":
-      return "pending";
-    default:
-      return null;
-  }
+function mapDuitkuResult(resultCode: string): "settlement" | "failed" | null {
+  if (resultCode === "00") return "settlement";
+  if (resultCode === "01") return "failed";
+  return null;
 }
 
 export async function POST(req: Request) {
-  const privateKey = process.env.TRIPAY_PRIVATE_KEY;
-  if (!privateKey) {
-    return NextResponse.json({ success: false, message: "TRIPAY_PRIVATE_KEY belum dikonfigurasi di server." }, { status: 500 });
+  const apiKey = process.env.DUITKU_API_KEY;
+  if (!apiKey) {
+    return NextResponse.json({ error: "DUITKU_API_KEY belum dikonfigurasi di server." }, { status: 500 });
   }
 
   const rawBody = await req.text();
-  const signatureHeader = req.headers.get("x-callback-signature");
-  const expectedSignature = createHmac("sha256", privateKey).update(rawBody).digest("hex");
+  const fields = new URLSearchParams(rawBody);
 
-  if (!signatureHeader || expectedSignature !== signatureHeader) {
-    return NextResponse.json({ success: false, message: "Signature tidak valid." }, { status: 403 });
+  const merchantCode = fields.get("merchantCode") ?? "";
+  const amount = fields.get("amount") ?? "";
+  const orderId = fields.get("merchantOrderId") ?? "";
+  const resultCode = fields.get("resultCode") ?? "";
+  const signature = fields.get("signature") ?? "";
+
+  if (!merchantCode || !amount || !orderId || !signature) {
+    return NextResponse.json({ error: "Field callback tidak lengkap." }, { status: 400 });
   }
 
-  let body: { merchant_ref?: string; status?: string };
-  try {
-    body = JSON.parse(rawBody);
-  } catch {
-    return NextResponse.json({ success: false, message: "Body tidak valid." }, { status: 400 });
+  const expectedSignature = createHmac("sha256", apiKey).update(`${merchantCode}${amount}${orderId}`).digest("hex");
+  if (expectedSignature !== signature) {
+    return NextResponse.json({ error: "Signature tidak valid." }, { status: 403 });
   }
 
-  const orderId = body.merchant_ref;
-  const newStatus = body.status ? mapTripayStatus(body.status) : null;
-  if (!orderId || !newStatus) {
-    // Event yang belum kita kenal/perlu diabaikan -- tetap balas sukses supaya Tripay tidak retry terus.
-    return NextResponse.json({ success: true });
+  const newStatus = mapDuitkuResult(resultCode);
+  if (!newStatus) {
+    return new Response("OK", { status: 200 });
   }
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!supabaseUrl || !serviceRoleKey) {
-    return NextResponse.json({ success: false, message: "SUPABASE_SERVICE_ROLE_KEY belum dikonfigurasi di server." }, { status: 500 });
+    return NextResponse.json({ error: "SUPABASE_SERVICE_ROLE_KEY belum dikonfigurasi di server." }, { status: 500 });
   }
 
   // Hanya di sini service_role dipakai -- lewati RLS secara sengaja untuk
@@ -74,16 +61,17 @@ export async function POST(req: Request) {
   const admin = createClient(supabaseUrl, serviceRoleKey, { auth: { persistSession: false } });
 
   // Jangan mundurkan status yang sudah final (mis. 'settlement' balik ke
-  // 'pending' kalau Tripay kirim callback duplikat/telat).
+  // status lain kalau Duitku kirim callback duplikat/telat).
   const { data: existing } = await admin.from("payments").select("status").eq("order_id", orderId).maybeSingle();
   if (existing?.status === "settlement" && newStatus !== "settlement") {
-    return NextResponse.json({ success: true });
+    return new Response("OK", { status: 200 });
   }
 
   const { error } = await admin.from("payments").update({ status: newStatus }).eq("order_id", orderId);
   if (error) {
-    return NextResponse.json({ success: false, message: error.message }, { status: 500 });
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  return NextResponse.json({ success: true });
+  // Duitku hanya mensyaratkan HTTP 200 OK sebagai balasan valid.
+  return new Response("OK", { status: 200 });
 }

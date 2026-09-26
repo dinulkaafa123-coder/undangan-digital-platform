@@ -1,46 +1,76 @@
 import { NextResponse } from "next/server";
+import { createHmac } from "crypto";
+import { templates } from "@/data/templates";
+
+/** `yyyy-MM-dd HH:mm:ss` di zona waktu Asia/Jakarta -- format persis yang diminta Duitku untuk `datetime`. */
+function duitkuDatetime(): string {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Jakarta",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  }).formatToParts(new Date());
+  const get = (type: string) => parts.find((p) => p.type === type)?.value ?? "00";
+  return `${get("year")}-${get("month")}-${get("day")} ${get("hour")}:${get("minute")}:${get("second")}`;
+}
 
 /**
- * Proxy tipis ke `GET /merchant/payment-channel` milik Tripay -- harus
- * lewat server karena butuh header Authorization dengan TRIPAY_API_KEY
- * (rahasia). Browser hanya menerima daftar channel yang sudah aktif,
- * sudah dipangkas ke field yang benar-benar dipakai UI.
+ * Proxy tipis ke `getpaymentmethod` milik Duitku -- harus lewat server
+ * karena butuh merchantCode+apiKey (rahasia) untuk signature. Biaya per
+ * metode berbeda tergantung nominal, jadi wajib menyertakan `templateId`
+ * supaya nominal yang dipakai adalah harga template ASLI dari
+ * `data/templates.ts`, bukan nilai bebas dari client.
  */
-export async function GET() {
-  const apiKey = process.env.TRIPAY_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json({ error: "Payment gateway belum dikonfigurasi di server (TRIPAY_API_KEY kosong)." }, { status: 500 });
+export async function GET(req: Request) {
+  const templateId = new URL(req.url).searchParams.get("templateId");
+  if (!templateId) {
+    return NextResponse.json({ error: "templateId wajib diisi." }, { status: 400 });
+  }
+  const template = templates.find((t) => t.slug === templateId);
+  if (!template || !template.price || template.price <= 0) {
+    return NextResponse.json({ error: "Template tidak ditemukan atau tidak memerlukan pembayaran." }, { status: 400 });
   }
 
-  const isProduction = process.env.TRIPAY_IS_PRODUCTION === "true";
-  const base = isProduction ? "https://tripay.co.id/api" : "https://tripay.co.id/api-sandbox";
+  const merchantCode = process.env.DUITKU_MERCHANT_CODE;
+  const apiKey = process.env.DUITKU_API_KEY;
+  if (!merchantCode || !apiKey) {
+    return NextResponse.json({ error: "Payment gateway belum dikonfigurasi di server (env Duitku kosong)." }, { status: 500 });
+  }
+
+  const isProduction = process.env.DUITKU_IS_PRODUCTION === "true";
+  const base = isProduction ? "https://passport.duitku.com" : "https://sandbox.duitku.com";
+
+  const amount = template.price;
+  const datetime = duitkuDatetime();
+  // Formula resmi Duitku (getpaymentmethod): HMAC_SHA256(merchantcode + amount + datetime, apiKey)
+  const signature = createHmac("sha256", apiKey).update(`${merchantCode}${amount}${datetime}`).digest("hex");
 
   let res: Response;
   try {
-    res = await fetch(`${base}/merchant/payment-channel`, {
-      headers: { Authorization: `Bearer ${apiKey}` },
-      cache: "no-store",
+    res = await fetch(`${base}/webapi/api/merchant/paymentmethod/getpaymentmethod`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ merchantcode: merchantCode, amount, datetime, signature }),
     });
   } catch {
-    return NextResponse.json({ error: "Tidak bisa menghubungi Tripay." }, { status: 502 });
+    return NextResponse.json({ error: "Tidak bisa menghubungi Duitku." }, { status: 502 });
   }
 
   const json = await res.json().catch(() => null);
-  if (!res.ok || !json?.success || !Array.isArray(json.data)) {
-    return NextResponse.json({ error: "Gagal mengambil daftar metode pembayaran." }, { status: 502 });
+  if (!res.ok || !Array.isArray(json?.paymentFee)) {
+    return NextResponse.json({ error: json?.responseMessage || "Gagal mengambil daftar metode pembayaran." }, { status: 502 });
   }
 
-  const channels = (json.data as Array<Record<string, unknown>>)
-    .filter((c) => c.active)
-    .map((c) => ({
-      code: c.code as string,
-      name: c.name as string,
-      group: (c.group as string) ?? "Lainnya",
-      iconUrl: c.icon_url as string | undefined,
-      feeCustomer: c.fee_customer,
-      minimumAmount: c.minimum_amount as number | undefined,
-      maximumAmount: c.maximum_amount as number | undefined,
-    }));
+  const channels = (json.paymentFee as Array<Record<string, unknown>>).map((c) => ({
+    code: c.paymentMethod as string,
+    name: c.paymentName as string,
+    iconUrl: c.paymentImage as string | undefined,
+    fee: c.totalFee as string | undefined,
+  }));
 
   return NextResponse.json({ channels });
 }

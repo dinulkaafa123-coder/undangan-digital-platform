@@ -21,16 +21,19 @@ export interface PaymentRecord {
 export interface PaymentChannel {
   code: string;
   name: string;
-  group: string;
   iconUrl?: string;
-  feeCustomer?: unknown;
-  minimumAmount?: number;
-  maximumAmount?: number;
+  fee?: string;
 }
 
-/** Daftar metode pembayaran aktif dari Tripay (QRIS, VA bank, e-wallet, dst) -- diambil server-side lewat `/api/payments/channels` karena butuh API key rahasia. */
-export async function getPaymentChannels(): Promise<PaymentChannel[]> {
-  const res = await fetch("/api/payments/channels");
+/**
+ * Daftar metode pembayaran aktif dari Duitku (VA bank, e-wallet, QRIS, dst)
+ * -- diambil server-side lewat `/api/payments/channels` karena butuh API
+ * key rahasia. Biaya per metode berbeda tergantung nominal, jadi
+ * `templateId` wajib disertakan supaya nominal yang dipakai adalah harga
+ * template ASLI, bukan nilai bebas.
+ */
+export async function getPaymentChannels(templateId: string): Promise<PaymentChannel[]> {
+  const res = await fetch(`/api/payments/channels?templateId=${encodeURIComponent(templateId)}`);
   const json = await res.json();
   if (!res.ok) throw new Error(json.error || "Gagal mengambil daftar metode pembayaran.");
   return json.channels as PaymentChannel[];
@@ -38,11 +41,11 @@ export async function getPaymentChannels(): Promise<PaymentChannel[]> {
 
 /**
  * Minta transaksi baru ke server kita sendiri (`/api/payments/create-transaction`),
- * yang lalu memanggil Tripay pakai TRIPAY_API_KEY/TRIPAY_PRIVATE_KEY (rahasia,
- * hanya di server). Harga selalu dihitung ulang dari `data/templates.ts` di
- * server, bukan dari nilai yang dikirim browser. `checkoutUrl` adalah
- * halaman Tripay yang menampilkan instruksi bayar (QR/nomor VA/dsb) --
- * dibuka di tab baru, bukan popup JS seperti gateway lain.
+ * yang lalu memanggil Duitku pakai DUITKU_MERCHANT_CODE/DUITKU_API_KEY
+ * (rahasia, hanya di server). Harga selalu dihitung ulang dari
+ * `data/templates.ts` di server, bukan dari nilai yang dikirim browser.
+ * `checkoutUrl` adalah halaman Duitku yang menampilkan instruksi bayar
+ * (QR/nomor VA/dsb) -- dibuka di tab baru, bukan popup JS seperti gateway lain.
  */
 export async function createPaymentTransaction(
   templateId: string,
@@ -60,7 +63,7 @@ export async function createPaymentTransaction(
   return json as { orderId: string; checkoutUrl: string; payCode: string | null; qrUrl: string | null };
 }
 
-/** Dipakai untuk polling status order pembayaran -- semua metode Tripay bersifat async (pembeli menyelesaikan di halaman/apps terpisah), jadi selalu perlu di-poll sampai 'settlement'. */
+/** Dipakai untuk polling status order pembayaran -- semua metode Duitku bersifat async (pembeli menyelesaikan di halaman/apps terpisah), jadi selalu perlu di-poll sampai 'settlement'. */
 export async function getPaymentStatus(orderId: string): Promise<PaymentRecord | null> {
   const supabase = getSupabase();
   const { data, error } = await supabase.rpc("get_payment_status", { p_order_id: orderId });

@@ -12,7 +12,7 @@ import { copyToClipboard } from "@/lib/utils";
 type Stage = "summary" | "choose-method" | "creating" | "pending" | "working" | "success" | "error";
 
 const POLL_INTERVAL_MS = 4000;
-const POLL_TIMEOUT_MS = 10 * 60 * 1000; // Tripay lebih sering async (VA/QR) -- kasih waktu lebih lama dari sekadar popup kartu.
+const POLL_TIMEOUT_MS = 10 * 60 * 1000; // Duitku lebih sering async (VA/QR) -- kasih waktu lebih lama dari sekadar popup kartu.
 
 function getPublicUrl(slug: string): string {
   const base = typeof window !== "undefined" && window.location.origin ? window.location.origin : "http://localhost:3000";
@@ -197,7 +197,7 @@ export function PublishFlow({
       return;
     }
 
-    // mode "activate": tidak ada template gratis -- selalu pilih metode bayar dulu lewat Tripay.
+    // mode "activate": tidak ada template gratis -- selalu pilih metode bayar dulu lewat Duitku.
     if (!templatePrice || templatePrice <= 0) {
       setError("Template ini belum memiliki harga yang valid. Hubungi kami sebelum mengaktifkan undangan ini.");
       setStage("error");
@@ -208,7 +208,7 @@ export function PublishFlow({
     setChannelsLoading(true);
     setError("");
     try {
-      const list = await getPaymentChannels();
+      const list = await getPaymentChannels(templateId);
       setChannels(list);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Gagal mengambil daftar metode pembayaran.");
@@ -284,7 +284,7 @@ export function PublishFlow({
             </div>
             {mode === "activate" && (
               <p className="mt-3 text-xs text-black/40">
-                Pembayaran diproses aman lewat Tripay (QRIS, e-wallet, transfer bank, minimarket). Undangan aktif otomatis setelah pembayaran terverifikasi.
+                Pembayaran diproses aman lewat Duitku (QRIS, e-wallet, transfer bank VA, dan lainnya). Undangan aktif otomatis setelah pembayaran terverifikasi.
               </p>
             )}
             <div className="mt-6 flex gap-3">
@@ -325,7 +325,7 @@ export function PublishFlow({
                       <img src={ch.iconUrl} alt={ch.name} className="h-6 w-10 object-contain" />
                     )}
                     <span className="flex-1 text-sm font-medium text-black">{ch.name}</span>
-                    <span className="text-xs text-black/40">{ch.group}</span>
+                    {ch.fee && <span className="text-xs text-black/40">Biaya Rp{ch.fee}</span>}
                   </button>
                 ))}
             </div>
