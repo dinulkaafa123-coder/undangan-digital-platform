@@ -46,6 +46,16 @@ import LivingBloom from "./42-living-bloom";
 import JavaEternal from "./43-java-eternal";
 import SundaEternal from "./44-sunda-eternal";
 import BatakEternal from "./45-batak-eternal";
+import VelvetDepth from "./46-velvet-depth";
+import MarbleAtrium from "./47-marble-atrium";
+import FloatingPetals3D from "./48-floating-petals-3d";
+import ObsidianDepth from "./49-obsidian-depth";
+import GoldenGateDepth from "./50-golden-gate-depth";
+import BalloonDepth from "./51-balloon-depth";
+import AcademicHallDepth from "./52-academic-hall-depth";
+import SkylineDepth from "./53-skyline-depth";
+import MihrabDepth from "./54-mihrab-depth";
+import LanternHallDepth from "./55-lantern-hall-depth";
 
 /**
  * Registry pusat: templateId/slug -> komponen renderer, lintas SEMUA
@@ -110,6 +120,16 @@ export const templateRegistry: Record<string, AnyEventTemplateComponent> = {
   "java-eternal": JavaEternal,
   "sunda-eternal": SundaEternal,
   "batak-eternal": BatakEternal,
+  "velvet-depth": VelvetDepth,
+  "marble-atrium": MarbleAtrium,
+  "floating-petals-3d": FloatingPetals3D,
+  "obsidian-depth": ObsidianDepth,
+  "golden-gate-depth": GoldenGateDepth,
+  "balloon-depth": BalloonDepth,
+  "academic-hall-depth": AcademicHallDepth,
+  "skyline-depth": SkylineDepth,
+  "mihrab-depth": MihrabDepth,
+  "lantern-hall-depth": LanternHallDepth,
 } as unknown as Record<string, AnyEventTemplateComponent>;
 
 export function getTemplateComponent(slug: string): AnyEventTemplateComponent | undefined {
