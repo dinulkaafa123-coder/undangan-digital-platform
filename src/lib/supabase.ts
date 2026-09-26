@@ -8,8 +8,12 @@ import { createClient, type SupabaseClient } from "@supabase/supabase-js";
  * fungsi RPC yang membatasi apa yang bisa dibaca/diubah publik
  * (lihat `supabase/migrations/0001_invitations.sql`).
  *
- * TIDAK PERNAH memakai service_role key -- key itu tidak boleh ada di
- * kode aplikasi sama sekali.
+ * Client di file ini TIDAK PERNAH memakai service_role key. Satu-satunya
+ * pengecualian di seluruh aplikasi ada di `src/app/api/payments/notification/route.ts`
+ * (webhook Midtrans, server-only, tidak pernah diimpor komponen client) --
+ * di sana service_role dipakai SETELAH signature Midtrans diverifikasi,
+ * untuk menuliskan status pembayaran yang sudah terbukti sah. Client
+ * Supabase bersama ini tetap hanya untuk anon key.
  */
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;

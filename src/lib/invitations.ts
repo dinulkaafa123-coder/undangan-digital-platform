@@ -53,13 +53,28 @@ export function suggestSlugBase(data: EventData): string {
  * lihat catatan keamanan di `supabase/migrations/0001_invitations.sql`.
  */
 
-export async function createInvitation(baseSlug: string, eventType: EventType, templateId: string, eventData: EventData): Promise<InvitationRecord> {
+/**
+ * `orderId` WAJIB mengarah ke order pembayaran yang sudah 'settlement' di
+ * tabel `payments`, belum pernah dipakai, dan template_id-nya cocok --
+ * divalidasi atomik di dalam fungsi `create_invitation` sendiri (lihat
+ * `supabase/migrations/0003_payments.sql`). Kalau tidak, RPC akan
+ * menolak (error `payment_not_settled` dkk) walau dipanggil langsung
+ * lewat REST tanpa lewat UI -- jadi tidak ada jalur bikin undangan gratis.
+ */
+export async function createInvitation(
+  baseSlug: string,
+  eventType: EventType,
+  templateId: string,
+  eventData: EventData,
+  orderId: string
+): Promise<InvitationRecord> {
   const supabase = getSupabase();
   const { data, error } = await supabase.rpc("create_invitation", {
     p_base_slug: baseSlug,
     p_event_type: eventType,
     p_template_id: templateId,
     p_event_data: eventData,
+    p_order_id: orderId,
   });
   if (error) throw error;
   return data as InvitationRecord;

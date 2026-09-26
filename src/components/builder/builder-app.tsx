@@ -422,6 +422,7 @@ export function BuilderApp({
           eventType={eventType}
           templateId={templateId}
           templateName={currentTemplate?.name ?? templateId}
+          templatePrice={currentTemplate?.price ?? 0}
           eventData={eventData}
           mode={publishedSlug ? "update" : "activate"}
           existingSlug={publishedSlug ?? undefined}
