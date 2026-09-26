@@ -83,9 +83,16 @@ export default function PrivacyPolicyPage() {
           </Section>
 
           <Section title="8. Menghubungi kami">
-            <p>Untuk pertanyaan privasi, permintaan akses, atau penghapusan data, hubungi kami melalui email{" "}
-              <span className="font-medium text-black">dinulkaafa123@gmail.com</span>.
-            </p>
+            <p>Untuk pertanyaan privasi, permintaan akses, atau penghapusan data, hubungi kami melalui:</p>
+            <ul className="list-disc space-y-1 pl-5">
+              <li>Email: <span className="font-medium text-black">dinulkaafa123@gmail.com</span></li>
+              <li>
+                WhatsApp:{" "}
+                <a href="https://wa.me/6285883449331" className="font-medium text-black underline underline-offset-2">
+                  0858-8344-9331
+                </a>
+              </li>
+            </ul>
           </Section>
 
           <Section title="9. Perubahan kebijakan ini">

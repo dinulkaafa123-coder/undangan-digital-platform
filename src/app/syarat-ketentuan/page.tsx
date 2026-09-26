@@ -59,7 +59,7 @@ export default function TermsPage() {
           </Section>
 
           <Section title="4. Kebijakan pembatalan & pengembalian dana">
-            <p>Karena aktivasi undangan langsung menghasilkan tautan yang dapat dibagikan, pembelian template premium bersifat final dan tidak dapat dikembalikan (non-refundable), kecuali jika terjadi kesalahan teknis yang murni dari pihak kami (misalnya undangan gagal aktif meski pembayaran berhasil). Pada kasus seperti itu, hubungi kami di email pada bagian 7 untuk penyelesaian.</p>
+            <p>Karena aktivasi undangan langsung menghasilkan tautan yang dapat dibagikan, pembelian template premium bersifat final dan tidak dapat dikembalikan (non-refundable), kecuali jika terjadi kesalahan teknis yang murni dari pihak kami (misalnya undangan gagal aktif meski pembayaran berhasil). Pada kasus seperti itu, hubungi kami lewat kontak pada bagian 7 untuk penyelesaian.</p>
           </Section>
 
           <Section title="5. Ketersediaan layanan">
@@ -71,9 +71,16 @@ export default function TermsPage() {
           </Section>
 
           <Section title="7. Menghubungi kami">
-            <p>Untuk pertanyaan seputar Layanan, template, atau pembayaran, hubungi kami melalui email{" "}
-              <span className="font-medium text-black">dinulkaafa123@gmail.com</span>.
-            </p>
+            <p>Untuk pertanyaan seputar Layanan, template, atau pembayaran, hubungi kami melalui:</p>
+            <ul className="list-disc space-y-1 pl-5">
+              <li>Email: <span className="font-medium text-black">dinulkaafa123@gmail.com</span></li>
+              <li>
+                WhatsApp:{" "}
+                <a href="https://wa.me/6285883449331" className="font-medium text-black underline underline-offset-2">
+                  0858-8344-9331
+                </a>
+              </li>
+            </ul>
           </Section>
 
           <Section title="8. Perubahan ketentuan">
